@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>연락처 · 김형석 포트폴리오</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="index.html">KIM HYEONGSEOK</a>
+    <nav class="nav" aria-label="페이지">
+      <a href="index.html">소개</a>
+      <a href="career.html">경력</a>
+      <a href="contact.html" aria-current="page">연락처</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap contact-page contact" aria-labelledby="contact-title">
+    <p class="label">Contact</p>
+    <h1 id="contact-title">다음 퍼널을<br><strong>함께 설계해요.</strong></h1>
+    <p class="lede">그로스 마케팅, 데이터 분석, 퍼포먼스 광고에 관한 이야기라면 언제든 연락 주세요.</p>
+    <div class="links">
+      <div class="link">
+        <span class="label">Email</span>
+        <span class="v" id="email">zeratula7@gmail.com</span>
+        <button class="copy" type="button" id="copy-email" data-target="email">복사</button>
+      </div>
+      <div class="link">
+        <span class="label">Instagram</span>
+        <div class="v-wrap"><a class="v" href="https://www.instagram.com/brotherstone.pic/" target="_blank" rel="noopener">@brotherstone.pic ↗</a><span class="v-note">인물 사진을 취미로 찍고 있습니다</span></div>
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <nav class="pager" aria-label="다른 페이지">
+      <a href="index.html"><span class="label">← 소개</span><b>홈으로</b></a>
+      <a href="career.html"><span class="label">경력 →</span><b>경력 보기</b></a>
+    </nav>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Kim Hyeongseok</span>
+    <span>Growth · Data · Content</span>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll("button.copy").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var el = document.getElementById(btn.dataset.target);
+    var text = el.textContent.trim();
+    function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = "복사"; }, 1600); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      done("선택됨");
+    }
+    try { navigator.clipboard.writeText(text).then(function () { done("복사됨"); }, fallback); }
+    catch (e) { fallback(); }
+  });
+});
+</script>
+</body>
+</html>
