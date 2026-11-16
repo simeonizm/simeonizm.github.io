@@ -1052,6 +1052,103 @@
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
       <a href="#funnel"><span class="label">← 이전 프로젝트</span><b>퍼널 분석 프로젝트</b></a>
+      <a href="#seo"><span class="label">다음 프로젝트 →</span><b>B world SEO · 접근성 개선안</b></a>
+    </nav>
+  </div>
+</section>
+<section class="proj-page" id="seo" data-title="B world SEO · 접근성 개선안" hidden>
+  <div class="wrap">
+    <p class="label crumb proj-crumb"><a href="career.html#skbroadband">← 리노커뮤니케이션즈</a></p>
+      <article class="project">
+        <div class="project-head">
+          <p class="label">SEO · 접근성</p>
+          <h1 class="ptitle">B world SEO · 접근성 개선안</h1>
+        </div>
+        <div class="pbody">
+          <dl class="facts">
+            <dt>대상</dt><dd>B world 요금제 페이지 (인터넷 요금제, B tv 요금제)</dd>
+            <dt>범위</dt><dd>SEO 3개 항목 · 접근성 1개 항목</dd>
+            <dt>산출물</dt><dd>SEO·접근성 개선 제안서 (근거 문서·코드 예시 포함)</dd>
+          </dl>
+          <div>
+            <h4>배경</h4>
+            <p>요금제 페이지는 가입으로 이어지는 핵심 랜딩이지만, 검색엔진에는 페이지마다 무엇을 다루는지가 제대로 전달되지 않고 있었습니다. 마크업과 URL, 화면 설정을 직접 점검해 검색 노출과 접근성을 동시에 떨어뜨리는 구조적 원인을 찾고, 개발팀이 바로 적용할 수 있는 형태로 개선안을 정리했습니다.</p>
+          </div>
+          <div>
+            <h4>진단 요약</h4>
+            <div class="audit" role="table" aria-label="B world SEO·접근성 진단 요약">
+              <div class="au-row au-head" role="row"><span role="columnheader">항목</span><span role="columnheader">현재 문제</span><span role="columnheader">제안</span></div>
+              <div class="au-row" role="row"><span class="au-name" role="cell"><b>&lt;h1&gt; 태그</b><i>SEO · 페이지 주제 전달</i></span><span role="cell">모든 페이지가 같은 &lt;h1&gt;SK Broadband&lt;/h1&gt;을 써서 검색엔진이 페이지마다 같은 주제로 인식</span><span role="cell">페이지별 핵심 키워드로 &lt;h1&gt; 작성, 로고는 div·span으로 분리</span></div>
+              <div class="au-row" role="row"><span class="au-name" role="cell"><b>URL 구조</b><i>SEO · URL만으로 내용 파악</i></span><span role="cell">menu_id=P02010000 같은 숫자 파라미터가 페이지 내용을 설명하지 못함</span><span role="cell">숫자 ID를 빼고 의미 있는 경로만 남기기</span></div>
+              <div class="au-row" role="row"><span class="au-name" role="cell"><b>스키마 마크업</b><i>SEO · 검색 결과 노출 확대</i></span><span role="cell">JSON-LD 구조화 데이터가 없어 검색 결과에 리치 스니펫이 나오지 않음</span><span role="cell">Breadcrumb·Product/Offer·FAQ 스키마 적용</span></div>
+              <div class="au-row" role="row"><span class="au-name" role="cell"><b>Viewport</b><i>접근성 · WCAG 권장 충족</i></span><span role="cell">화면을 0.5배로 고정하고 확대·축소를 막아 모바일 가독성과 접근성 저하</span><span role="cell">width=device-width, initial-scale=1.0으로 확대 허용</span></div>
+            </div>
+          </div>
+          <div>
+            <h4>① 페이지마다 다른 &lt;h1&gt;</h4>
+            <p>&lt;h1&gt;은 검색엔진이 페이지의 핵심 주제를 파악하는 가장 강한 신호입니다. 그런데 GNB 공통 영역에 같은 &lt;h1&gt;이 들어가 있어, 모든 페이지가 “SK Broadband”라는 같은 주제로 읽히고 있었습니다.</p>
+            <div class="code-ba">
+              <div class="cb now"><p class="cb-k">현재</p><pre><code>&lt;h1&gt;SK Broadband&lt;/h1&gt;
+&lt;!-- 모든 페이지 공통 --&gt;</code></pre><p class="cb-n">페이지와 상관없이 같은 제목</p></div>
+              <div class="cb to"><p class="cb-k">제안</p><pre><code>&lt;h1&gt;인터넷 요금제 안내&lt;/h1&gt;
+&lt;div class=&quot;logo&quot;&gt;SK Broadband&lt;/div&gt;</code></pre><p class="cb-n">페이지별 핵심 키워드, 로고는 그대로 노출</p></div>
+            </div>
+          </div>
+          <div>
+            <h4>② 의미가 읽히는 URL</h4>
+            <p>검색엔진은 URL도 페이지를 이해하는 단서로 씁니다. 숫자 ID 파라미터는 내용을 설명하지 못하고 주소만 복잡하게 만듭니다.</p>
+            <div class="code-ba">
+              <div class="cb now"><p class="cb-k">현재</p><pre><code>/product/internet/charge.do
+  ?menu_id=P02010000</code></pre><p class="cb-n">숫자 ID로 페이지 구분</p></div>
+              <div class="cb to"><p class="cb-k">제안</p><pre><code>/product/internet/charge.do</code></pre><p class="cb-n">경로만으로 ‘인터넷 › 요금제’가 읽힘</p></div>
+            </div>
+            <p class="note">이전 도메인(skbroadband.com)에서 넘어오는 리다이렉션 규칙도 함께 정리해야 한다는 점을 적용 조건으로 명시했습니다.</p>
+          </div>
+          <div>
+            <h4>③ 스키마 마크업으로 검색 결과 넓히기</h4>
+            <p>B world에는 JSON-LD 구조화 데이터가 적용돼 있지 않아 검색 결과에 경로·가격·FAQ 같은 리치 스니펫이 나오지 않았습니다. &lt;script type="application/ld+json"&gt;만 추가하면 되는 방식이라 HTML 수정을 최소화하면서 선제적으로 노출 우위를 가져갈 수 있다고 제안했습니다.</p>
+            <div class="tbl-wrap">
+              <table class="pk">
+                <thead><tr><th>스키마</th><th>담는 정보</th><th>기대 효과</th></tr></thead>
+                <tbody>
+                  <tr><td><b>BreadcrumbList</b></td><td>카테고리 경로 표시</td><td>URL 대신 “상품 서비스 › 인터넷 › 요금제” 경로가 보여 클릭 유도</td></tr>
+                  <tr><td><b>Product · Offer</b></td><td>요금제 이름·가격·통화</td><td>검색 결과에 가격이 노출돼 관심 유도</td></tr>
+                  <tr><td><b>FAQPage</b></td><td>자주 묻는 질문 구조화</td><td>질문과 답변이 검색 결과에 바로 노출</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="stack-k" style="margin:1.2rem 0 .5rem">예시 · 인터넷 요금제 페이지 BreadcrumbList</p>
+            <pre class="code-one"><code>&lt;script type=&quot;application/ld+json&quot;&gt;
+{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;BreadcrumbList&quot;,
+  &quot;itemListElement&quot;: [
+    { &quot;@type&quot;: &quot;ListItem&quot;, &quot;position&quot;: 1, &quot;name&quot;: &quot;상품 서비스&quot; },
+    { &quot;@type&quot;: &quot;ListItem&quot;, &quot;position&quot;: 2, &quot;name&quot;: &quot;인터넷&quot; },
+    { &quot;@type&quot;: &quot;ListItem&quot;, &quot;position&quot;: 3, &quot;name&quot;: &quot;요금제&quot; }
+  ]
+}
+&lt;/script&gt;</code></pre>
+          </div>
+          <div>
+            <h4>④ 확대할 수 있는 화면 (접근성)</h4>
+            <p>모바일에서 페이지를 절반 크기로 고정하고 확대까지 막아, 글자가 작아 읽기 어렵고 WCAG(웹 콘텐츠 접근성 지침) 권장에도 맞지 않았습니다.</p>
+            <div class="code-ba">
+              <div class="cb now"><p class="cb-k">현재</p><pre><code>&lt;meta name=&quot;viewport&quot;
+  content=&quot;initial-scale=0.5,
+  maximum-scale=0.5, minimum-scale=0.5,
+  width=device-width, user-scalable=no&quot;&gt;</code></pre><p class="cb-n">0.5배 고정, 확대 불가</p></div>
+              <div class="cb to"><p class="cb-k">제안</p><pre><code>&lt;meta name=&quot;viewport&quot;
+  content=&quot;width=device-width,
+  initial-scale=1.0, maximum-scale=5.0,
+  user-scalable=yes&quot;&gt;</code></pre><p class="cb-n">기기 너비에 맞추고 확대 허용</p></div>
+            </div>
+          </div>
+          <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">검색엔진도, 확대가 필요한 사용자도 같은 페이지를 읽는다.</p><p>제목·주소·구조화 데이터·화면 설정은 눈에 잘 띄지 않지만, 검색 노출과 읽기 쉬움을 함께 결정합니다. 개선안은 근거 문서와 바로 쓸 수 있는 코드로 정리할 때 개발팀의 실행으로 이어집니다.</p></aside>
+        </div>
+      </article>
+    <nav class="pager" aria-label="다른 프로젝트">
+      <a href="#segment"><span class="label">← 이전 프로젝트</span><b>고객 세그먼트 분석 프로젝트</b></a>
       <a href="career.html#skbroadband"><span class="label">목록 →</span><b>리노커뮤니케이션즈 프로젝트</b></a>
     </nav>
   </div>

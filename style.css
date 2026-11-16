@@ -602,3 +602,24 @@ figure.shot figcaption .fig-note { display: block; margin-top: 0.3rem; font-size
 }
 .proj-page .pbody ul.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .proj-page .pbody .tags + .note { margin-top: 1rem; }
+
+/* ---------- Audit table + code before/after (SEO) ---------- */
+.audit { display: grid; border-top: 2px solid var(--fg); }
+.au-row { display: grid; grid-template-columns: 10rem minmax(0, 1fr) minmax(0, 1fr); gap: 1.25rem; padding: 0.9rem 0; border-bottom: 1px solid var(--line); font-size: 0.9375rem; line-height: 1.65; }
+.au-row > * { min-width: 0; }
+.au-head { font-size: 0.8125rem; color: var(--muted); padding: 0.6rem 0; }
+.au-name b { display: block; font-size: 1rem; font-weight: 700; }
+.au-name i { font-style: normal; font-size: 0.8125rem; color: var(--muted); }
+.code-ba { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1rem; }
+.cb { border: 1px solid var(--line); border-radius: 8px; padding: 0.9rem 1rem 1rem; display: grid; gap: 0.5rem; align-content: start; min-width: 0; }
+.cb.to { border-color: var(--fg); }
+.cb-k { margin: 0; font-size: 0.8125rem !important; font-weight: 700; color: var(--muted); }
+.cb.to .cb-k { color: var(--fg); }
+.cb-n { margin: 0; font-size: 0.875rem !important; color: var(--muted); }
+.cb pre, .code-one { margin: 0; overflow-x: auto; font-family: ui-monospace, "SFMono-Regular", Consolas, "D2Coding", monospace; font-size: 0.8125rem; line-height: 1.6; white-space: pre; letter-spacing: 0; }
+.code-one { border: 1px solid var(--line); border-radius: 8px; padding: 0.9rem 1rem; }
+@media (max-width: 640px) {
+  .au-row { grid-template-columns: minmax(0, 1fr); gap: 0.35rem; }
+  .au-head { display: none; }
+  .code-ba { grid-template-columns: minmax(0, 1fr); }
+}
