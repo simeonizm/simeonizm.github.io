@@ -530,3 +530,7 @@ footer .wrap { font-size: 0.8125rem; }
 .proj-page .case-plain > h4 { font-size: 1.125rem; font-weight: 700; margin: 0; }
 .pbody ul.chips { display: grid; gap: 0.5rem; }
 .pbody ul.chips li { background: none; padding: 0 0 0 1.25rem; color: var(--fg); font-size: 1rem; }
+/* bar charts with long labels: label on its own line above the bar */
+.bars.k-above { gap: 0.9rem; }
+.bars.k-above .bar { grid-template-columns: minmax(0, 1fr) 4.5rem; row-gap: 0.35rem; }
+.bars.k-above .bar .k { grid-column: 1 / -1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--fg); }
