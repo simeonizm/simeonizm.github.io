@@ -662,3 +662,22 @@ table.pk.decide td.c, table.pk.decide th.c { text-align: center; width: 9rem; }
   .an-ex { grid-column: 1 / -1; }
 }
 .analogy { margin-top: 0.8rem; }
+
+/* pipeline: arrows are their own grid columns so they never touch the boxes */
+.pipe { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr); gap: 0.6rem; align-items: center; }
+.pipe-box { padding: 0.8rem 0.9rem; border: 1px solid var(--line); border-radius: 8px; display: grid; gap: 0.15rem; min-width: 0; }
+.pipe-box.last { border-color: var(--fg); }
+.pipe-box b { font-size: 0.975rem; font-weight: 700; }
+.pipe-box span { font-size: 0.8125rem; color: var(--muted); }
+.pipe-ar { color: var(--muted); font-size: 1rem; }
+@media (max-width: 640px) {
+  .pipe { grid-template-columns: minmax(0, 1fr); justify-items: stretch; }
+  .pipe-ar { justify-self: center; transform: rotate(90deg); }
+}
+
+/* consistent breathing room between stacked elements inside a project section */
+.proj-page .pbody > div:not([class]) > * + * { margin-top: 1rem; }
+.proj-page .pbody > div:not([class]) > h4 + * { margin-top: 0; }
+.proj-page .pbody .paths .pgroup { margin: 1.6rem 0 0.5rem; }
+.proj-page .pbody .paths .phead + .pgroup { margin-top: 0.9rem; }
+table.pk.decide th.c { white-space: nowrap; width: auto; }

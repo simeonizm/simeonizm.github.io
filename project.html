@@ -1241,12 +1241,15 @@
           <div>
             <h4>④ 언제 GA4를, 언제 빅쿼리를</h4>
             <p>GA4는 데이터 보존 기간, 샘플링, Looker Studio 할당량이라는 한계가 있습니다. 도구 간 연결 구조를 먼저 보여주고, 질문에 따라 어떤 도구를 써야 하는지 바로 고를 수 있는 기준표를 만들었습니다.</p>
-            <ol class="pipe">
-              <li><b>Web · Script</b><span>사이트</span></li>
-              <li><b>GA4 + GTM</b><span>원천 데이터 수집</span></li>
-              <li><b>BigQuery</b><span>적재 · 가공</span></li>
-              <li><b>Looker Studio</b><span>시각화 · 대시보드</span></li>
-            </ol>
+            <div class="pipe" role="list">
+              <div class="pipe-box" role="listitem"><b>Web · Script</b><span>사이트</span></div>
+              <span class="pipe-ar" aria-hidden="true">→</span>
+              <div class="pipe-box" role="listitem"><b>GA4 + GTM</b><span>원천 데이터 수집</span></div>
+              <span class="pipe-ar" aria-hidden="true">→</span>
+              <div class="pipe-box" role="listitem"><b>BigQuery</b><span>적재 · 가공</span></div>
+              <span class="pipe-ar" aria-hidden="true">→</span>
+              <div class="pipe-box last" role="listitem"><b>Looker Studio</b><span>시각화 · 대시보드</span></div>
+            </div>
             <p class="stack-k" style="margin:.6rem 0 0">Google Search Console로 검색 노출 데이터를 더해 봅니다.</p>
             <p class="stack-k" style="margin:1.4rem 0 .5rem">목적별 도구 선택 기준</p>
             <div class="tbl-wrap">
