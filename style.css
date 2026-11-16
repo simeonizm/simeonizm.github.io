@@ -681,3 +681,7 @@ table.pk.decide td.c, table.pk.decide th.c { text-align: center; width: 9rem; }
 .proj-page .pbody .paths .pgroup { margin: 1.6rem 0 0.5rem; }
 .proj-page .pbody .paths .phead + .pgroup { margin-top: 0.9rem; }
 table.pk.decide th.c { white-space: nowrap; width: auto; }
+
+/* Full-width content: body columns line up with the headings and rules above them */
+.pbody, .proj-page .pbody { max-width: none; }
+.page-hero .summary, ul.points, .links { max-width: none; }
