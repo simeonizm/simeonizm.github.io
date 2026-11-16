@@ -895,52 +895,65 @@
         <div class="pbody">
           <dl class="facts">
             <dt>대상</dt><dd>SK브로드밴드 B world, B directshop</dd>
-            <dt>목표</dt><dd>전환율 개선을 위한 목적별 사용자 흐름 분석, 챗봇 메시지 노출 구간 최적화</dd>
-            <dt>전환 정의</dt><dd>가입 상담 · 바로가입 · 상담전화</dd>
-            <dt>도구</dt><dd>GA4 유입경로 탐색, 세션 기준 경로 분석</dd>
+            <dt>기간</dt><dd>2024.05.14 — 05.20 (세션 기준)</dd>
+            <dt>전환 정의</dt><dd>가입 상담 완료</dd>
+            <dt>도구</dt><dd>GA4 유입경로 탐색, Closed Funnel</dd>
           </dl>
           <div>
             <h4>문제와 가설</h4>
-            <p>전체 유입 대비 전환율이 낮은데 어디서 이탈하는지 명확하지 않았습니다. 두 가지 가설을 세웠습니다.</p>
-            <ul style="margin-top:.6rem">
-              <li>특정 페이지에 이탈이 집중되어 있다.</li>
+            <p>전체 유입 대비 가입 상담 전환이 낮은데, 어느 구간에서 사용자가 빠지는지는 보이지 않았습니다. 두 가지 가설을 세웠습니다.</p>
+            <ul>
+              <li>시작 페이지에 따라 이탈이 몰리는 구간이 다르다.</li>
               <li>챗봇 노출 위치가 사용자 흐름에 도움이 되지 않는다.</li>
             </ul>
           </div>
           <div>
-            <h4>분석 과정</h4>
-            <ol>
-              <li>가입 상담 완료를 최종 목표로 두고, 주요 유입 지점에 따라 세 가지 패턴으로 나눴습니다.<span class="sub">A 메인 페이지 유입 · B 신규가입 기획전 유입 · C B world 메인에서 B directshop으로 이동</span></li>
-              <li>Closed Funnel 방식을 적용했습니다. 중간 단계로 들어온 사용자와 앞 단계에서 이탈한 사용자를 제외해 흐름을 명확히 보고, 유입처 다양성의 영향을 줄였습니다.</li>
-              <li>사용자가 반드시 거친다고 가정한 핵심 단계를 중간에 넣으며 여러 퍼널 조합을 실험하고, 전환율이 가장 높은 구조를 골랐습니다.</li>
-              <li>마케팅과 기획전의 영향을 감안해 한 달 전체 기간으로 모든 패턴을 검토했습니다.</li>
-            </ol>
+            <h4>분석 설계</h4>
+            <ul>
+              <li>가입 상담 완료를 끝점으로 두고, 사용자가 들어온 시작 페이지에 따라 <b>세 가지 패턴</b>으로 나눴습니다.</li>
+              <li>패턴마다 중간에 거치는 페이지를 바꿔 끼우며 경로 14개를 만들고, 경로별 단계 이탈률과 완료율을 비교했습니다.</li>
+              <li><b>Closed Funnel</b>로 중간 단계에서 들어온 사용자와 앞 단계 이탈자를 제외해, 유입처가 섞인 영향을 줄였습니다.</li>
+            </ul>
           </div>
-          <figure class="shot">
-            <div class="plate" style="padding:0"><img src="img/skb-funnel-a.jpg" alt="패턴 A: BDS 홈에서 상품 LIST, 기획전 상세, 기획전 LIST를 거쳐 가입 상담 완료까지의 단계별 이탈률" width="1600" height="1221" loading="lazy"></div>
-            <figcaption><b>패턴 A · BDS 홈 유입.</b> 메인에서 시작해 상품·기획전 페이지를 거치는 경로별 이탈률이에요.<span class="fig-note">※ 인원 수는 보안상 반올림해 표기했습니다. 정확한 수치는 면접에서 설명드리겠습니다.</span></figcaption>
-          </figure>
+          <div>
+            <h4>경로별 이탈과 상담 완료율</h4>
+            <div class="paths" role="group" aria-label="유입 패턴별 경로와 상담 완료율">
+              <div class="phead"><span>경로 (화살표 위는 다음 단계로 넘어가지 못한 비율)</span><span>상담 완료율</span></div>
+              <p class="pgroup"><b>패턴 A · BDS 홈에서 시작</b><span>B directshop 메인으로 들어온 사용자</span></p>
+              <div class="prow"><span class="pid">A</span><div class="psteps"><span class="st">BDS 홈</span><span class="ar"><i>이탈 82.0%</i></span><span class="st">상품 LIST</span><span class="ar"><i>이탈 96.4%</i></span><span class="st end">상담 완료</span></div><div class="prate"><span class="track"><span class="fill" style="width:27.2%"></span></span><b>0.65%</b></div></div>
+              <div class="prow"><span class="pid">A-1</span><div class="psteps"><span class="st">BDS 홈</span><span class="ar"><i>이탈 84.7%</i></span><span class="st">기획전 상세</span><span class="ar"><i>이탈 96.3%</i></span><span class="st end">상담 완료</span></div><div class="prate"><span class="track"><span class="fill" style="width:24.1%"></span></span><b>0.57%</b></div></div>
+              <div class="prow"><span class="pid">A-2</span><div class="psteps"><span class="st">BDS 홈</span><span class="ar"><i>이탈 99.6%</i></span><span class="st end">상담 완료</span></div><div class="prate"><span class="track"><span class="fill" style="width:18.0%"></span></span><b>0.43%</b></div></div>
+              <div class="prow"><span class="pid">A-3</span><div class="psteps"><span class="st">BDS 홈</span><span class="ar"><i>이탈 88.3%</i></span><span class="st">기획전 LIST</span><span class="ar"><i>이탈 97.1%</i></span><span class="st end">상담 완료</span></div><div class="prate"><span class="track"><span class="fill" style="width:14.0%"></span></span><b>0.33%</b></div></div>
+              <div class="prow"><span class="pid">A-4</span><div class="psteps"><span class="st">BDS 홈</span><span class="ar"><i>이탈 82.0%</i></span><span class="st">상품 LIST</span><span class="ar hot"><i>이탈 57.0%</i></span><span class="st">상품 상세</span><span class="ar"><i>이탈 94.8%</i></span><span class="st end">상담 완료</span></div><div class="prate"><span class="track"><span class="fill" style="width:17.0%"></span></span><b>0.41%</b></div></div>
+              <p class="pgroup"><b>패턴 B · 신규가입 기획전에서 시작</b><span>기획전 페이지로 바로 들어온 사용자</span></p>
+              <div class="prow best"><span class="pid">B</span><div class="psteps"><span class="st">신규가입 기획전</span><span class="ar"><i>이탈 97.6%</i></span><span class="st end">상담 완료</span></div><div class="prate"><span class="track"><span class="fill" style="width:100.0%"></span></span><b>2.38%</b></div></div>
+              <div class="prow"><span class="pid">B-2</span><div class="psteps"><span class="st">신규가입 기획전</span><span class="ar"><i>이탈 84.3%</i></span><span class="st">BDS 홈</span><span class="ar"><i>이탈 93.1%</i></span><span class="st end">상담 완료</span></div><div class="prate"><span class="track"><span class="fill" style="width:45.4%"></span></span><b>1.08%</b></div></div>
+              <div class="prow"><span class="pid">B-3</span><div class="psteps"><span class="st">신규가입 기획전</span><span class="ar"><i>이탈 74.2%</i></span><span class="st">기획전 LIST</span><span class="ar"><i>이탈 94.6%</i></span><span class="st end">상담 완료</span></div><div class="prate"><span class="track"><span class="fill" style="width:58.2%"></span></span><b>1.39%</b></div></div>
+              <div class="prow"><span class="pid">B-4</span><div class="psteps"><span class="st">신규가입 기획전</span><span class="ar"><i>이탈 86.7%</i></span><span class="st">상품 LIST</span><span class="ar"><i>이탈 94.0%</i></span><span class="st end">상담 완료</span></div><div class="prate"><span class="track"><span class="fill" style="width:33.3%"></span></span><b>0.79%</b></div></div>
+              <p class="pgroup"><b>패턴 C · B world 홈에서 넘어옴</b><span>B world에서 B directshop으로 이동한 사용자</span></p>
+              <div class="prow"><span class="pid">C</span><div class="psteps"><span class="st">BW 홈</span><span class="ar"><i>이탈 91.4%</i></span><span class="st">BDS 기획전 상세</span><span class="ar"><i>이탈 96.5%</i></span><span class="st end">상담 완료</span></div><div class="prate"><span class="track"><span class="fill" style="width:12.5%"></span></span><b>0.30%</b></div></div>
+              <div class="prow"><span class="pid">C-1</span><div class="psteps"><span class="st">BW 홈</span><span class="ar"><i>이탈 88.6%</i></span><span class="st">BDS 홈</span><span class="ar"><i>이탈 98.1%</i></span><span class="st end">상담 완료</span></div><div class="prate"><span class="track"><span class="fill" style="width:8.9%"></span></span><b>0.21%</b></div></div>
+              <div class="prow"><span class="pid">C-2</span><div class="psteps"><span class="st">BW 홈</span><span class="ar"><i>이탈 95.8%</i></span><span class="st">상품 상세</span><span class="ar"><i>이탈 96.4%</i></span><span class="st end">상담 완료</span></div><div class="prate"><span class="track"><span class="fill" style="width:6.3%"></span></span><b>0.15%</b></div></div>
+              <div class="prow"><span class="pid">C-3</span><div class="psteps"><span class="st">BW 홈</span><span class="ar"><i>이탈 95.7%</i></span><span class="st">기획전 LIST</span><span class="ar"><i>이탈 96.7%</i></span><span class="st end">상담 완료</span></div><div class="prate"><span class="track"><span class="fill" style="width:5.9%"></span></span><b>0.14%</b></div></div>
+              <div class="prow"><span class="pid">C-4</span><div class="psteps"><span class="st">BW 홈</span><span class="ar"><i>이탈 95.8%</i></span><span class="st">가입 사은품</span><span class="ar"><i>이탈 97.0%</i></span><span class="st end">상담 완료</span></div><div class="prate"><span class="track"><span class="fill" style="width:5.2%"></span></span><b>0.12%</b></div></div>
+            </div>
+            <p class="note">상담 완료율은 각 패턴의 시작 페이지 방문자 대비 비율입니다. 가장 높은 경로를 진하게 표시했습니다.</p>
+          </div>
           <div>
             <h4>발견</h4>
             <ul>
-              <li><b>기획전으로 들어온 패턴 B에서 60~80%가 이탈했습니다.</b> 상품 상세 진입률이 매우 낮아 기획전에서 상세로 이어지는 구성에 구조적인 문제가 있었습니다.</li>
-              <li>가입 상담을 마친 뒤 이어지는 경로가 없어, 메인 페이지에서 높은 이탈이 나타났습니다.</li>
-              <li>챗봇을 본 사용자의 행동 변화는 미미했습니다. 노출 위치가 의도와 맞지 않거나, 고정 노출로 배너처럼 무시되었을 가능성이 컸습니다.</li>
+              <li><b>신규가입 기획전으로 들어온 사용자(패턴 B)가 가장 잘 전환됐습니다.</b> 기획전에서 바로 상담하는 경로의 완료율이 2.38%로 전체 최고였습니다.</li>
+              <li><b>하지만 기획전에서 다음 페이지로 넘어가는 순간 74~87%가 빠졌습니다.</b> 기획전 → 상세로 이어지는 구성에 개선 여지가 가장 컸습니다.</li>
+              <li><b>상품 상세를 거친 사용자는 덜 이탈했습니다.</b> 상품 LIST → 상품 상세 구간 이탈은 57%로, 다른 단계(82~99%)보다 크게 낮았습니다.</li>
+              <li><b>B world에서 넘어온 사용자(패턴 C)는 완료율이 0.1~0.3%로 가장 낮았습니다.</b> 두 사이트를 오가는 흐름에서 동기가 끊겼습니다.</li>
+              <li>챗봇을 본 사용자의 행동 변화는 미미했습니다. 고정 노출로 배너처럼 무시되었을 가능성이 컸습니다.</li>
             </ul>
           </div>
-          <figure class="shot">
-            <div class="plate" style="padding:0"><img src="img/skb-funnel-b.jpg" alt="패턴 B: 신규가입 기획전에서 BDS 홈, 기획전 LIST, 상품 LIST를 거쳐 가입 상담 완료까지의 단계별 이탈률" width="1600" height="1258" loading="lazy"></div>
-            <figcaption><b>패턴 B · 신규가입 기획전 유입.</b> 기획전에서 바로 상담으로 가는 경로는 이탈률이 97.6~100%였어요.<span class="fig-note">※ 인원 수는 보안상 반올림해 표기했습니다. 정확한 수치는 면접에서 설명드리겠습니다.</span></figcaption>
-          </figure>
-          <figure class="shot">
-            <div class="plate" style="padding:0"><img src="img/skb-funnel-c.jpg" alt="패턴 C: B world 홈에서 BDS 기획전 상세, BDS 홈, 상품 상세 등을 거쳐 가입 상담 완료까지의 단계별 이탈률" width="1600" height="1266" loading="lazy"></div>
-            <figcaption><b>패턴 C · B world 홈에서 B directshop으로 이동.</b> 두 사이트를 오가는 경로의 단계별 이탈률이에요.<span class="fig-note">※ 인원 수는 보안상 반올림해 표기했습니다. 정확한 수치는 면접에서 설명드리겠습니다.</span></figcaption>
-          </figure>
           <div>
             <h4>성과</h4>
             <ul>
-              <li>개선이 필요한 핵심 구간(기획전 → 상세)을 특정했습니다.</li>
-              <li>유입 경로별 전환 기여도를 근거로 챗봇 메시지 노출 위치를 다시 설계할 기반을 만들었습니다.</li>
+              <li>개선 우선 구간(기획전 → 상세)과 강화할 경로(상품 상세 경유)를 근거와 함께 제시했습니다.</li>
+              <li>유입 패턴별 전환 기여도를 바탕으로 챗봇 메시지 노출 위치를 다시 설계할 기준을 만들었습니다.</li>
               <li>지속 모니터링과 후속 A/B 테스트에 쓸 GA4 퍼널·탐색 리포트를 구축했습니다.</li>
             </ul>
           </div>
@@ -963,54 +976,77 @@
         </div>
         <div class="pbody">
           <dl class="facts">
-            <dt>대상</dt><dd>SK브로드밴드 B directshop</dd>
-            <dt>배경</dt><dd>2025년부터 고객 세그먼트별 맞춤 상품·혜택 패키지 전략이 필요했습니다. 기존 고객 분석은 팝업·광고 유입 확인에 그쳤지만, 이번에는 고객 행동과 상품 니즈 추론을 결합한 인사이트가 필요했습니다. 유입 유형별로 어떤 상품이 필요하고 어떤 혜택을 보여줘야 전환되는지, 이를 위한 세그먼트와 페르소나 설계가 고객사의 요청이었습니다.</dd>
+            <dt>대상</dt><dd>SK브로드밴드 B world, B directshop (2024년 1~3분기)</dd>
+            <dt>질문</dt><dd>유입 유형별로 어떤 상품이 필요하고, 어떤 혜택을 보여줘야 가입으로 이어지는가</dd>
             <dt>산출물</dt><dd>GA4 탐색 리포트, Figma·PPT 보고서</dd>
           </dl>
           <div>
-            <h4>분석 과정</h4>
-            <ol>
-              <li>요청은 전체 유입 데이터 기반 세그먼트였지만 GA4 샘플링과 Google Signals 인구통계 unknown 문제로 정합성이 떨어졌습니다. 목적을 “전환 목적 행동 → 상품 관심 → 혜택 기획”으로 다시 정의했습니다.</li>
-              <li>전환 목적성이 높은 행동 네 가지를 필요 행동으로 정의했습니다.<span class="sub">찜하기 · 장바구니 · 가입상담 신청 · 바로가입</span></li>
-              <li>유입 채널(Naver, paid_brand_search), 유입 메뉴, 필요 행동이 일어난 페이지를 기준으로 세그먼트를 나누고, 기기 OS·성별·연령·검색어·기획전 진입 여부를 함께 고려했습니다.</li>
-              <li>세그먼트마다 필요 행동이 가장 많은 페이지 TOP 3를 뽑아 그 안의 상품군으로 관심 상품을 추론했고, 1~3분기로 나눠 패턴 변화를 확인했습니다.</li>
+            <h4>배경</h4>
+            <p>2025년부터 고객 세그먼트별 맞춤 상품·혜택 패키지 전략이 필요했습니다. 기존 분석은 팝업·광고 유입 확인에 그쳤기 때문에, 고객 행동과 상품 니즈를 함께 읽을 기준이 필요했습니다. 전체 유입 기준 세그먼트는 GA4 샘플링과 인구통계 unknown 문제로 정합성이 떨어져, 목적을 <b>“전환 목적 행동 → 상품 관심 → 혜택 기획”</b>으로 다시 정의했습니다.</p>
+          </div>
+          <div>
+            <h4>① 관심을 재는 기준 정하기</h4>
+            <p>전환 목적성이 높은 네 가지 행동을 <b>필요 행동</b>으로 정의하고, 이 행동이 많이 일어난 페이지에서 사용자가 관심 있는 상품과 혜택을 읽었습니다.</p>
+            <ol class="flow">
+              <li><b>필요 행동</b><span>찜하기 · 장바구니 · 가입상담 · 바로가입</span></li>
+              <li><b>관심 측정</b><span>행동별 발생 비중 집계</span></li>
+              <li><b>관심 페이지</b><span>분기·행동별 TOP 3 페이지 추출</span></li>
+              <li><b>상품·혜택 분석</b><span>페이지 속 상품군과 혜택 해석</span></li>
             </ol>
           </div>
-          <figure class="shot">
-            <div class="plate" style="padding:0"><img src="img/skb-seg-3-actions.jpg" alt="필요 행동 정의 알고리즘: 찜하기, 장바구니, 가입상담, 바로가입으로 사용자 관심을 측정해 높은 관심 페이지와 상품·혜택을 분석" width="1600" height="576" loading="lazy"></div>
-            <figcaption><b>필요 행동 정의.</b> 찜하기·장바구니·가입상담·바로가입으로 관심을 재고, 관심이 높은 페이지에서 상품과 혜택을 읽었어요.</figcaption>
-          </figure>
-          <figure class="shot">
-            <div class="plate" style="padding:0"><img src="img/skb-seg-1-channel.jpg" alt="BW/BDS 유입 채널 비율과 채널별 찜하기, 장바구니, 가입상담, 바로가입 비율 원그래프" width="1600" height="1760" loading="lazy"></div>
-            <figcaption><b>유입 경로 분석.</b> 네 가지 필요 행동 모두에서 naver / paid_brandsearch 비중이 가장 커서 세그먼트의 기준 채널로 잡았어요.</figcaption>
-          </figure>
-          <figure class="shot">
-            <div class="plate" style="padding:0"><img src="img/skb-seg-2-mobile.jpg" alt="분기별 활성 사용자 대비 모바일 사용자 비율 표와 그래프, 2024년 7월 한국갤럽 인구통계별 스마트폰 운영체제 비율" width="1600" height="1750" loading="lazy"></div>
-            <figcaption><b>모바일 사용자 분석.</b> 이용의 약 78%가 모바일이고, OS에 따라 연령대가 뚜렷이 갈려(한국갤럽 2024.7) 모바일 OS를 세그먼트 기준으로 삼았어요.<span class="fig-note">※ 인원 수는 보안상 반올림해 표기했습니다. 정확한 수치는 면접에서 설명드리겠습니다.</span></figcaption>
-          </figure>
+          <div>
+            <h4>② 기준 채널 고르기</h4>
+            <p>naver / paid_brandsearch는 전체 유입에서는 22%였지만, 가입에 가까운 행동일수록 비중이 커져 40%를 넘었습니다. 가장 구매 의도가 높은 이 채널을 세그먼트의 기준으로 삼았습니다.</p>
+            <p class="stack-k" style="margin:1rem 0 .5rem">행동별 naver / paid_brandsearch 비중</p>
+            <div class="bars" role="img" aria-label="행동별 naver / paid_brandsearch 비중: 전체 유입 21.59%, 찜하기 25.52%, 장바구니 40.52%, 가입상담 42.12%, 바로가입 41.49%">
+              <div class="bar"><span class="k">전체 유입</span><span class="track"><span class="fill ghost" style="width:43.2%"></span></span><span class="v">21.6%</span></div>
+              <div class="bar"><span class="k">찜하기</span><span class="track"><span class="fill" style="width:51.0%"></span></span><span class="v">25.5%</span></div>
+              <div class="bar"><span class="k">장바구니</span><span class="track"><span class="fill" style="width:81.0%"></span></span><span class="v">40.5%</span></div>
+              <div class="bar"><span class="k">가입상담</span><span class="track"><span class="fill" style="width:84.2%"></span></span><span class="v">42.1%</span></div>
+              <div class="bar"><span class="k">바로가입</span><span class="track"><span class="fill" style="width:83.0%"></span></span><span class="v">41.5%</span></div>
+            </div>
+          </div>
+          <div>
+            <h4>③ 모바일 OS로 나누기</h4>
+            <p>이용의 약 78%가 모바일에서 일어났고, 모바일 OS는 연령대와 강하게 연결돼 있었습니다(한국갤럽 2024.7). GA4 인구통계가 비어 있는 한계를 <b>OS로 대신 읽을 수 있다</b>고 판단했습니다.</p>
+            <p class="stack-k" style="margin:1rem 0 .5rem">분기별 모바일 이용 비율</p>
+            <div class="bars" role="img" aria-label="분기별 모바일 이용 비율: 1분기 80.52%, 2분기 78.44%, 3분기 75.14%">
+              <div class="bar"><span class="k">1분기</span><span class="track"><span class="fill" style="width:80.5%"></span></span><span class="v">80.5%</span></div>
+              <div class="bar"><span class="k">2분기</span><span class="track"><span class="fill" style="width:78.4%"></span></span><span class="v">78.4%</span></div>
+              <div class="bar"><span class="k">3분기</span><span class="track"><span class="fill" style="width:75.1%"></span></span><span class="v">75.1%</span></div>
+            </div>
+            <p class="stack-k" style="margin:1.6rem 0 .5rem">연령대별 스마트폰 브랜드 (한국갤럽, 2024년 7월)</p>
+            <div class="diverge" role="img" aria-label="연령대별 스마트폰 브랜드 비율: 18~29세 갤럭시 34% 아이폰 64%, 30대 갤럭시 52% 아이폰 45%, 40대 갤럭시 77% 아이폰 19%, 50대 갤럭시 86% 아이폰 9%, 60대 갤럭시 86% 아이폰 1%, 70대 이상 갤럭시 72% 아이폰 2%">
+              <div class="dv-head"><span>갤럭시 (Android)</span><span></span><span>아이폰 (iOS)</span></div>
+              <div class="dv-row"><span class="dv-l"><b>34%</b><span class="dv-track"><span class="dv-fill ghost" style="width:34%"></span></span></span><span class="dv-k">18~29세</span><span class="dv-r"><span class="dv-track"><span class="dv-fill" style="width:64%"></span></span><b>64%</b></span></div>
+              <div class="dv-row"><span class="dv-l"><b>52%</b><span class="dv-track"><span class="dv-fill ghost" style="width:52%"></span></span></span><span class="dv-k">30대</span><span class="dv-r"><span class="dv-track"><span class="dv-fill" style="width:45%"></span></span><b>45%</b></span></div>
+              <div class="dv-row"><span class="dv-l"><b>77%</b><span class="dv-track"><span class="dv-fill ghost" style="width:77%"></span></span></span><span class="dv-k">40대</span><span class="dv-r"><span class="dv-track"><span class="dv-fill" style="width:19%"></span></span><b>19%</b></span></div>
+              <div class="dv-row"><span class="dv-l"><b>86%</b><span class="dv-track"><span class="dv-fill ghost" style="width:86%"></span></span></span><span class="dv-k">50대</span><span class="dv-r"><span class="dv-track"><span class="dv-fill" style="width:9%"></span></span><b>9%</b></span></div>
+              <div class="dv-row"><span class="dv-l"><b>86%</b><span class="dv-track"><span class="dv-fill ghost" style="width:86%"></span></span></span><span class="dv-k">60대</span><span class="dv-r"><span class="dv-track"><span class="dv-fill" style="width:1%"></span></span><b>1%</b></span></div>
+              <div class="dv-row"><span class="dv-l"><b>72%</b><span class="dv-track"><span class="dv-fill ghost" style="width:72%"></span></span></span><span class="dv-k">70대 이상</span><span class="dv-r"><span class="dv-track"><span class="dv-fill" style="width:2%"></span></span><b>2%</b></span></div>
+            </div>
+          </div>
+          <div>
+            <h4>④ 세그먼트별 관심 페이지</h4>
+            <div class="personas">
+              <div class="persona"><p class="label">Seg 1 · naver 검색 + Android</p><b>40~60대 중심</b><span>기가라이트인터넷 + B tv cable<br>광랜인터넷 + B tv pop 180 + 기가와이파이<br>인터넷 + B tv pop 출시 이벤트</span></div>
+              <div class="persona"><p class="label">Seg 2 · naver 검색 + iOS</p><b>20~30대 중심</b><span>2030 다이렉트 요금제<br>광랜인터넷 + 기가와이파이<br>B tv 초고속 단품 기획전</span></div>
+            </div>
+            <p class="stack-k" style="margin:1.2rem 0 .5rem">두 세그먼트가 공통으로 관심을 보인 페이지 (8개)</p>
+            <ul class="tags"><li>광랜인터넷 + B tv 스탠다드 + 기가와이파이</li><li>기가라이트인터넷 + 기가와이파이</li><li>기가라이트인터넷 + B tv All + 기가와이파이</li><li>기가라이트인터넷 + B tv cable 200</li><li>기가라이트인터넷 + B tv pop 180 + 기가와이파이</li><li>넷플릭스 기획전</li><li>바로가입 기획전</li><li>신규가입 이벤트</li></ul>
+            <p class="note">세그먼트별 고유 페이지만 위 카드에 나눠 적었습니다. Seg 1은 TV 결합, Seg 2는 단품·다이렉트 요금제 쪽으로 관심이 갈렸습니다.</p>
+          </div>
           <div>
             <h4>결과</h4>
             <div class="personas">
-              <div class="persona">
-                <p class="label">Seg.1 · Android</p>
-                <b>40~60대 중장년층</b>
-                <span>인터넷·와이파이·TV 결합 상품 선호. 가격보다 안정성, 편안함, 실용적인 패키지 혜택을 중시합니다.</span>
-              </div>
-              <div class="persona">
-                <p class="label">Seg.2 · iOS</p>
-                <b>20~30대</b>
-                <span>단품, 빠른 인터넷, 와이파이 증폭, OTT 상품 선호. 콘텐츠 중심이고 가성비를 따지며 가입 전환이 빠릅니다.</span>
-              </div>
+              <div class="persona"><p class="label">Seg 1 · Android</p><b>결합 상품, TV까지</b><span>인터넷 중심 결합 상품에 관심이 높고 TV 상품에도 관심이 있습니다. 가격이 비교적 높아도 안정적인 패키지를 선택합니다.</span></div>
+              <div class="persona"><p class="label">Seg 2 · iOS</p><b>가볍게, 가성비로</b><span>인터넷 중심의 가벼운 결합을 선호하고 와이파이는 필수입니다. 단품과 다이렉트 요금제처럼 가성비를 따집니다.</span></div>
             </div>
+            <ul>
+              <li>상품 자체에 대한 기본 관심은 두 세그먼트 모두 기가라이트인터넷 중심으로 크게 다르지 않았습니다.</li>
+              <li>가입을 가른 것은 상품 단독의 매력이 아니라 <b>상품과 혜택이 결합된 종합 가치</b>였습니다. 그래서 ‘어떤 상품’과 ‘어떤 혜택’을 함께 설계하도록 제안했습니다.</li>
+            </ul>
           </div>
-          <figure class="shot">
-            <div class="plate" style="padding:0"><img src="img/skb-seg-4-segments.jpg" alt="Seg 1(naver/paid_brandsearch, Android)과 Seg 2(naver/paid_brandsearch, iOS)의 정의와 관심 페이지 목록" width="1600" height="1283" loading="lazy"></div>
-            <figcaption><b>세그먼트 분류.</b> 유입 채널과 모바일 OS로 두 세그먼트를 나누고 필요 행동별 관심 페이지를 뽑았어요.</figcaption>
-          </figure>
-          <figure class="shot">
-            <div class="plate" style="padding:0"><img src="img/skb-seg-5-result.jpg" alt="분석 결과: Seg 1은 인터넷 중심 결합 상품과 TV 상품에 관심, Seg 2는 가벼운 결합과 와이파이, 가성비 중심" width="1600" height="692" loading="lazy"></div>
-            <figcaption><b>분석 결과.</b> 상품만이 아니라 상품과 혜택의 결합 가치가 가입을 이끈다는 결론이에요.</figcaption>
-          </figure>
           <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">좋은 분석은 좋은 질문에서 시작한다.</p><p>‘어떤 고객에게 어떤 상품이 필요한가’로 질문을 좁히자, 데이터 한계 안에서도 상품 전략에 쓸 수 있는 페르소나가 나왔습니다.</p></aside>
         </div>
       </article>
