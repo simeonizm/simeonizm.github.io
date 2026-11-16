@@ -534,3 +534,4 @@ footer .wrap { font-size: 0.8125rem; }
 .bars.k-above { gap: 0.9rem; }
 .bars.k-above .bar { grid-template-columns: minmax(0, 1fr) 4.5rem; row-gap: 0.35rem; }
 .bars.k-above .bar .k { grid-column: 1 / -1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--fg); }
+figure.shot figcaption .fig-note { display: block; margin-top: 0.3rem; font-size: 0.8125rem; color: var(--faint); }
