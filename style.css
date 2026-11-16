@@ -623,3 +623,42 @@ figure.shot figcaption .fig-note { display: block; margin-top: 0.3rem; font-size
   .au-head { display: none; }
   .code-ba { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* ---------- Education project ---------- */
+.curri { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid var(--fg); }
+.proj-page .pbody .curri li { padding: 0.9rem 1rem 1rem 0; display: grid; gap: 0.35rem; align-content: start; }
+.proj-page .pbody .curri li::before { content: none; }
+.proj-page .pbody .curri li + li { padding-left: 1rem; border-left: 1px solid var(--line); }
+.cu-no { font-size: 0.8125rem; font-weight: 700; color: var(--muted); }
+.curri b { font-size: 1rem; font-weight: 700; line-height: 1.4; }
+.cu-items { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+.analogy { display: grid; border-top: 1px solid var(--fg); }
+.an-row { display: grid; grid-template-columns: 5.5rem 1.2rem 11rem minmax(0, 1fr); gap: 0.75rem; align-items: baseline; padding: 0.7rem 0; border-bottom: 1px solid var(--line); }
+.an-row > * { min-width: 0; }
+.an-row b { font-size: 1rem; font-weight: 700; }
+.an-eq { color: var(--faint); }
+.an-row span:nth-child(3) { font-weight: 600; }
+.an-ex { font-size: 0.9375rem; color: var(--muted); }
+.formula { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0.25rem; margin-top: 0.4rem; }
+.fx { display: grid; justify-items: center; gap: 0.3rem; }
+.fx b { font-family: ui-monospace, Consolas, monospace; font-size: 1.05rem; font-weight: 700; padding: 0.45rem 0.75rem; border: 1px solid var(--fg); border-radius: 6px; letter-spacing: 0; }
+.fx i { font-style: normal; font-size: 0.8125rem; color: var(--muted); }
+.fx-sep { font-family: ui-monospace, Consolas, monospace; font-size: 1.05rem; padding-top: 0.45rem; color: var(--muted); }
+table.pk code { font-family: ui-monospace, Consolas, monospace; font-size: 0.8125rem; letter-spacing: 0; }
+.pipe { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.6rem; }
+.proj-page .pbody .pipe li { position: relative; padding: 0.8rem 0.9rem; border: 1px solid var(--line); border-radius: 8px; display: grid; gap: 0.15rem; }
+.proj-page .pbody .pipe li::before { content: none; }
+.proj-page .pbody .pipe li + li::after { content: "→"; position: absolute; left: -1.25rem; top: 50%; transform: translateY(-50%); color: var(--muted); }
+.proj-page .pbody .pipe li:last-child { border-color: var(--fg); }
+.pipe b { font-size: 0.975rem; font-weight: 700; }
+.pipe span { font-size: 0.8125rem; color: var(--muted); }
+table.pk.decide td.c, table.pk.decide th.c { text-align: center; width: 9rem; }
+@media (max-width: 640px) {
+  .curri, .pipe { grid-template-columns: minmax(0, 1fr); }
+  .proj-page .pbody .curri li + li { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+  .proj-page .pbody .pipe li + li::after { content: "↓"; left: 50%; top: -1.25rem; transform: translateX(-50%); }
+  .an-row { grid-template-columns: 4.5rem minmax(0, 1fr); }
+  .an-eq { display: none; }
+  .an-ex { grid-column: 1 / -1; }
+}
+.analogy { margin-top: 0.8rem; }
