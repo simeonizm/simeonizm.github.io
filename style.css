@@ -508,3 +508,19 @@ footer .wrap { font-size: 0.8125rem; }
 .pcard .body span { font-size: 0.875rem; }
 .pcard:hover { border-color: var(--fg); }
 .subtabs { border-radius: 999px; overflow: hidden; }
+
+/* ---------- Project covers (B: black report cover) ---------- */
+:root { --cover: #141414; --cover-fg: #f4f4f2; --cover-muted: #9d9d97; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --cover: #242423; --cover-muted: #8f8f8a; } }
+:root[data-theme="dark"] { --cover: #242423; --cover-muted: #8f8f8a; }
+.pcard .thumb.cover {
+  position: relative; aspect-ratio: 16 / 10; background: var(--cover); color: var(--cover-fg);
+  border-bottom: 0; overflow: hidden;
+}
+.thumb.cover .cv-tag { position: absolute; left: 1.1rem; top: 0.95rem; font-size: 0.8125rem; font-weight: 600; color: var(--cover-muted); }
+.thumb.cover .cv-kw {
+  position: absolute; left: 1.1rem; top: 2.2rem; right: 1.1rem;
+  font-size: clamp(1.6rem, 2.6vw, 2rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.15;
+}
+.thumb.cover svg { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 52%; }
+.pcard:hover .thumb.cover { background: color-mix(in srgb, var(--cover) 88%, var(--cover-fg)); }
