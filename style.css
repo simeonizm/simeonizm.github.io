@@ -528,3 +528,5 @@ footer .wrap { font-size: 0.8125rem; }
 .takeaway p:last-child { color: var(--muted); }
 .case-plain { display: grid; gap: 1.2rem; padding-top: 0.25rem; }
 .proj-page .case-plain > h4 { font-size: 1.125rem; font-weight: 700; margin: 0; }
+.pbody ul.chips { display: grid; gap: 0.5rem; }
+.pbody ul.chips li { background: none; padding: 0 0 0 1.25rem; color: var(--fg); font-size: 1rem; }
