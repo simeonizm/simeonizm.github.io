@@ -77,8 +77,10 @@ section[id] { scroll-margin-top: 7rem; }
 .nav a {
   text-decoration: none; color: var(--fg); font-size: 1.0625rem; font-weight: 600; white-space: nowrap;
   padding: 0.45rem 1.1rem; border: 1px solid var(--line); border-radius: 999px;
+  display: inline-block; box-sizing: content-box; width: 2.6em; text-align: left;
   transition: border-color .15s ease, background-color .15s ease;
 }
+.nav a.sp2 { letter-spacing: 0.85em; }
 .nav a:hover { border-color: var(--fg); }
 .nav a[aria-current="page"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
 
