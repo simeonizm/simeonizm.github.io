@@ -121,9 +121,8 @@ section.block { border-top: 1px solid var(--line); padding-block: clamp(3rem, 7v
 .sec-head { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 4.5rem); align-self: start; }
 .sec-head h2 { margin: 0.35rem 0 0; font-size: 1.375rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.4; }
 
-.traits { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.traits li { padding: 1.25rem 1.25rem 1.25rem 0; border-bottom: 1px solid var(--line); font-size: 1.125rem; font-weight: 500; letter-spacing: -0.01em; }
-.traits li:nth-child(even) { padding-left: 1.25rem; border-left: 1px solid var(--line); }
+.traits { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2.5rem; }
+.traits li { padding: 1rem 0 1.6rem; border-top: 1px solid var(--fg); font-size: 1.125rem; font-weight: 500; letter-spacing: -0.01em; }
 .traits small { display: block; font-family: var(--font-mono); font-size: 0.8125rem; color: var(--faint); font-weight: 400; margin-bottom: 0.2rem; }
 
 .stats { margin-top: 2.75rem; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; }
@@ -445,7 +444,8 @@ footer .wrap { padding-block: 2rem 2.5rem; display: flex; justify-content: space
 }
 @media (max-width: 520px) {
   .traits, .tools { grid-template-columns: minmax(0, 1fr); }
-  .traits li:nth-child(even) { padding-left: 0; border-left: 0; }
+  .traits li { padding-bottom: 1.1rem; border-top-color: var(--line); }
+  .traits li:first-child { border-top-color: var(--fg); }
   .funnel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .funnel div:nth-child(2) { border-right: 0; }
   .funnel div:nth-child(3) { padding-left: 0; }
