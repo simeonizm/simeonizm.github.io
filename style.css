@@ -720,3 +720,72 @@ table.pk.decide th.c { white-space: nowrap; width: auto; }
   }
 }
 #projects .pgrid { grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); }
+
+/* ===== Type scale (7 steps). Every text size on the site resolves to one of these.
+   Placed last with !important on purpose: it replaces dozens of one-off sizes set over time. ===== */
+:root {
+  --t-xs: 0.8125rem;   /* 13 meta, labels, table cells */
+  --t-sm: 0.9375rem;   /* 15 secondary text */
+  --t-base: 1.0625rem; /* 17 body */
+  --t-md: 1.25rem;     /* 20 sub-headings, card/list titles */
+  --t-lg: 1.75rem;     /* 28 section headings, key figures */
+  --t-xl: clamp(2rem, 4.4vw, 2.75rem);    /* 44 page titles */
+  --t-display: clamp(2.6rem, 6.6vw, 4.75rem); /* 76 hero */
+}
+/* xs */
+.psteps .ar i, .psteps .st, .prate b, .project-head .kpi, .persona span, .pipe-box span, .fx i,
+.au-head, .au-name i, .cu-no, .cb-k, .prow .pid, figure.shot figcaption, .bar, .bar .k, .bar .v,
+.label, .crumb, .crumb a, .crumb span, .pager .label, .mark, .tools h3, .group h3 small,
+.pbody table td, .pbody table th, table.pk td, table.pk th, .cv-tag, .career .when, .career .meta-n, .career .go,
+.takeaway .label, .persona .label, .stat span, .facts-row div span, .kpis div span { font-size: var(--t-xs) !important; }
+/* sm */
+.hl-k, .stack-k, .proj-page .pbody .tags li, .an-ex, .au-row, .persona b, .pipe-box b, .fx b, .fx-sep,
+dl.facts dd, .tab b, .subtab, .lang p, .subpanel-desc, .video b, .career p, .proj-page .case h4, .svc span { font-size: var(--t-sm) !important; }
+/* base */
+body, .pbody p, .proj-page .pbody p, .pbody li, .pbody ul li, .pbody ol li, .pbody ul.chips li, ul.points li,
+.takeaway p, .hl-v i, .hl-v s, .an-row b, .au-name b, .page-hero .summary, .lede, .btn, .nav a,
+.pcard .body b, .lang b, .all-proj { font-size: var(--t-base) !important; }
+/* md */
+.pbody h4, .proj-page .case > b, .case > b, .takeaway .tk-head, .group h3, .career h3, .traits li,
+.page-hero .role, .hero .lede, .pager a b, .svc b, .quest b { font-size: var(--t-md) !important; }
+/* lg */
+.sec-head h2, section.block h2, .facts-row div b, .kpis div b, .hl-v b, .stat b { font-size: var(--t-lg) !important; }
+/* xl */
+.project-head .ptitle, .proj-page .ptitle, .career-intro h1 { font-size: var(--t-xl) !important; }
+/* display */
+.hero h1, .page-hero h1, .page-hero .ph, .contact-page h1 { font-size: var(--t-display) !important; }
+.pcard .body span, .dv-k, .pgroup span, .link .v-note { font-size: var(--t-xs) !important; }
+.cu-items { font-size: var(--t-sm) !important; }
+.pgroup b, .proj-page .pbody li b { font-size: var(--t-base) !important; }
+.proj-page .takeaway .label, .proj-page .persona .label { font-size: var(--t-xs) !important; }
+.proj-page .takeaway .tk-head { font-size: var(--t-md) !important; }
+
+/* ===== Project pages: one visual vocabulary.
+   Containers are separated by a top rule, never by a full box, radius or grey fill.
+   Charts keep three tones only: --fg (value), --faint (comparison), track. ===== */
+.takeaway, .proj-page .takeaway { border: 0; border-top: 2px solid var(--fg); padding: 1.1rem 0 0; }
+.persona, .pipe-box, .cb, .code-one { border: 0; border-top: 1px solid var(--fg); border-radius: 0; padding: 0.9rem 0 0; }
+.proj-page .case { background: none; border-left: 0; border-top: 1px solid var(--fg); padding: 1.1rem 0 0; }
+.proj-page .project-head .kpi { border: 0; padding: 0; font-weight: 700; }
+.fx b { border: 0; border-bottom: 2px solid var(--fg); border-radius: 0; padding: 0.2rem 0.1rem; }
+.psteps .st, span.cb, .plate, .frame, .proj-page .pbody .tags li { border-radius: 0; }
+
+/* ===== Header nav: plain text links, current page underlined (replaces pill buttons) ===== */
+.nav { gap: 1.75rem; }
+.nav a, .nav a.sp2 {
+  width: auto; padding: 0.35rem 0; border: 0; border-radius: 0; background: none; letter-spacing: -0.01em;
+  text-align: left; color: var(--muted); font-weight: 600;
+}
+.nav a:hover { color: var(--fg); border: 0; }
+.nav a[aria-current="page"] { color: var(--fg); background: none; box-shadow: inset 0 -2px 0 var(--fg); border: 0; }
+@media (max-width: 520px) { .nav { gap: 1.1rem; } }
+
+/* ===== Footer: readable contrast (was 3.2:1) ===== */
+footer .wrap { color: var(--muted); }
+.highlights { background: none; border: 0; border-top: 1px solid var(--fg); }
+.highlights .hl-title { padding: 0.9rem 0 0; }
+.hl { padding: 0.9rem 1.5rem 0.25rem 0; }
+.hl + .hl { border-left: 0; }
+@media (max-width: 640px) { .hl + .hl { border-top: 1px solid var(--line); } }
+.pbody > * { min-width: 0; }
+.pbody { grid-template-columns: minmax(0, 1fr); }
