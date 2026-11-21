@@ -793,19 +793,18 @@ footer .wrap { color: var(--muted); }
 /* ===== Premium (awesome-design "premium", Apple-inspired) =====
    Pure white / true black surfaces, Apple greys, tighter display type,
    frosted header, generous section spacing, soft-shadow rounded cards.
-   One accent only: the primary hero button. ===== */
+   Monochrome: no accent color. ===== */
 :root {
   --bg: #ffffff; --fg: #1d1d1f; --muted: #6e6e73; --faint: #86868b; --line: #d2d2d7; --chip: #f5f5f7;
-  --accent: #0071e3; --accent-hover: #0077ed;
   --ease: cubic-bezier(.25,.1,.25,1);
   --shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.06);
   --shadow-hover: 0 2px 4px rgba(0,0,0,.05), 0 14px 36px rgba(0,0,0,.12);
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --bg: #000000; --fg: #f5f5f7; --muted: #a1a1a6; --faint: #86868b; --line: #2d2d30; --chip: #1d1d1f; --accent: #2997ff; --accent-hover: #47a6ff;
+  :root:not([data-theme="light"]) { --bg: #000000; --fg: #f5f5f7; --muted: #a1a1a6; --faint: #86868b; --line: #2d2d30; --chip: #1d1d1f;
     --shadow: 0 0 0 1px #2d2d30; --shadow-hover: 0 0 0 1px #424245, 0 14px 36px rgba(0,0,0,.6); }
 }
-:root[data-theme="dark"] { --bg: #000000; --fg: #f5f5f7; --muted: #a1a1a6; --faint: #86868b; --line: #2d2d30; --chip: #1d1d1f; --accent: #2997ff; --accent-hover: #47a6ff;
+:root[data-theme="dark"] { --bg: #000000; --fg: #f5f5f7; --muted: #a1a1a6; --faint: #86868b; --line: #2d2d30; --chip: #1d1d1f;
   --shadow: 0 0 0 1px #2d2d30; --shadow-hover: 0 0 0 1px #424245, 0 14px 36px rgba(0,0,0,.6); }
 body { letter-spacing: -0.011em; }
 
@@ -829,10 +828,10 @@ section[id] { scroll-margin-top: 5rem; }
 section.block { border-top: 0; padding-block: clamp(4rem, 9vw, 7rem); }
 section.block + section.block { padding-top: clamp(1rem, 3vw, 2rem); }
 
-/* Buttons: pill, accent on primary only */
+/* Buttons: pill, monochrome */
 .btn { padding: 0.75rem 1.5rem; font-weight: 500; transition: background-color .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease); }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-.btn.primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+.btn.primary { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+.btn.primary:hover { background: color-mix(in srgb, var(--fg) 80%, var(--bg)); border-color: color-mix(in srgb, var(--fg) 80%, var(--bg)); }
 .btn:not(.primary):hover { background: var(--fg); color: var(--bg); }
 
 /* Project cards: borderless, rounded, soft shadow, gentle lift */
@@ -842,5 +841,5 @@ section.block + section.block { padding-top: clamp(1rem, 3vw, 2rem); }
 .pcard .body { padding: 1.1rem 1.25rem 1.35rem; }
 .pcard .body span { color: var(--faint); }
 .portrait { box-shadow: var(--shadow); }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { .pcard, .pcard:hover { transition: none; transform: none; } }
