@@ -858,3 +858,26 @@ section.block + section.block { padding-top: clamp(1rem, 3vw, 2rem); }
 .panel, .project, .panel section[id], .subpanel, .subtabs { scroll-margin-top: 8.5rem; }
 .subtab, .subtab + .subtab { font-size: var(--t-md) !important; font-weight: 700; letter-spacing: -0.02em; padding-bottom: 0.4rem; }
 .subtabs { gap: 1.75rem; margin-bottom: 0.6rem; }
+
+/* ===== Readability pass (project pages + global greys) ===== */
+/* 1. Darker secondary greys: muted ~8:1, faint ~4.6:1 on white */
+:root { --muted: #515154; --faint: #76767b; }
+/* 2. Korean body text at natural tracking; tight tracking stays on display type only */
+body, .pbody p, .pbody li, .takeaway p { letter-spacing: 0; }
+/* 3. Desktop body a step larger so long lines read easier (no width cap) */
+@media (min-width: 900px) {
+  .proj-page .pbody p, .proj-page .pbody li, .proj-page .pbody ul li, .proj-page .pbody ol li,
+  .proj-page .pbody ul.chips li, .proj-page .takeaway p { font-size: 1.125rem !important; line-height: 1.8; }
+}
+/* 4. Section headings clearly above body; separated by space, not rules */
+.proj-page .pbody { gap: clamp(3rem, 6vw, 4.5rem); }
+.proj-page .pbody > div > h4, .proj-page .pbody > h4 {
+  border-top: 0; padding-top: 0; margin-bottom: 1.1rem; letter-spacing: -0.025em; line-height: 1.3;
+}
+@media (min-width: 900px) { .proj-page .pbody > div > h4, .proj-page .pbody > h4 { font-size: var(--t-lg) !important; } }
+/* Fewer heavy rules: drop the article rule, soften the rest to hairlines; takeaway keeps the one strong rule */
+.proj-page .project { border-top: 0; padding-top: 0.5rem; }
+.proj-page dl.facts { border-top: 1px solid var(--line); }
+.persona, .pipe-box, .cb, .code-one, .proj-page .case { border-top-color: var(--line); }
+.pager { border-top-color: var(--line); }
+.takeaway, .proj-page .takeaway { border-top-width: 2px; }
