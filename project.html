@@ -413,6 +413,143 @@
     </nav>
   </div>
 </section>
+<section class="proj-page" id="f-diagnosis" data-title="장례식장 홈페이지 진단 자동화와 홈페이지 표준 구축" hidden>
+  <div class="wrap">
+    <p class="label crumb proj-crumb"><a href="career.html#gaon-funeral">← 가온프라임 / 장례·에어플라워</a></p>
+      <article class="project">
+        <div class="project-head">
+          <p class="label">장례·에어플라워 · 영업 자동화 · 홈페이지 표준 · 2026.11</p>
+          <h1 class="ptitle">장례식장 홈페이지 진단 자동화와 홈페이지 표준 구축</h1>
+          <span class="kpi">주소 하나로 4쪽 진단 보고서, 5~10분</span>
+        </div>
+        <div class="highlights">
+          <p class="label hl-title">핵심 변화</p>
+          <div class="hl"><span class="hl-k">진단 보고서 1건</span><div class="hl-v" aria-label="진단 보고서 1건: 수작업 조사에서 5~10분으로"><s>수작업 조사</s><i aria-hidden="true">→</i><b>5~10분</b></div><span class="hl-n">홈페이지 주소 하나만 입력</span></div>
+          <div class="hl"><span class="hl-k">홈페이지 기준 문서</span><div class="hl-v" aria-label="기준 문서 3개에서 표준 항목표 1개로"><s>3개 문서</s><i aria-hidden="true">→</i><b>표준 17개 항목</b></div><span class="hl-n">보고서·개발 기준서·영업 점검표·관리표가 같은 번호 사용</span></div>
+          <div class="hl"><span class="hl-k">의뢰처 진단 보고서</span><div class="hl-v" aria-label="의뢰처 10곳 진단"><b>10곳</b></div><span class="hl-n">영업 현장에서 바로 사용</span></div>
+          <div class="hl"><span class="hl-k">관리표 누적</span><div class="hl-v" aria-label="관리표 56곳 누적"><b>56곳</b></div><span class="hl-n">의뢰처와 주변 장례식장의 항목별 O/X</span></div>
+        </div>
+        <div class="pbody">
+          <div>
+            <h4>배경</h4>
+            <p>장례식장을 찾는 유족은 급한 상황에서 휴대폰으로 검색합니다. 그런데 홈페이지가 검색에 나오지 않거나, 전화 버튼이 눌리지 않거나, 비용 안내가 없는 곳이 많았습니다.</p>
+            <p style="margin-top:.8rem">영업할 때는 “홈페이지를 고쳐야 한다”, “광고를 해야 한다”를 장례식장마다 <b>손으로 조사해서 설명</b>해야 했습니다. 시간이 오래 걸렸고 사람마다 기준이 달랐습니다. 기준 문서도 세 개가 따로 놀아, 같은 장례식장을 봐도 문서마다 결과가 달랐습니다.</p>
+            <div class="tbl-wrap" style="margin-top:1rem">
+              <table class="pk">
+                <thead><tr><th>기존 문서</th><th class="n">항목 수</th></tr></thead>
+                <tbody>
+                  <tr><td>진단 스킬</td><td class="n">23개</td></tr>
+                  <tr><td>개발자용 기준서</td><td class="n">26개</td></tr>
+                  <tr><td>영업용 점검표</td><td class="n">15개</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <h4>먼저 시장을 봤습니다</h4>
+            <ul>
+              <li><b>벤치마크 DB.</b> 전국 장례식장 목록을 정리하고, 그중 홈페이지가 있는 곳의 홈페이지·검색·광고 점수를 매긴 벤치마크 DB를 만들었습니다.</li>
+              <li><b>의뢰처 심층 분석.</b> 한 의뢰처를 주변 장례식장과 비교하고 홈페이지 개선 할 일을 정리했습니다. 그중 사이트맵·robots.txt, 네이버·구글 검색 등록, 장례식장 정보 표시, 구글 애널리틱스가 실제 홈페이지에 반영됐습니다. 예산안별 광고 솔루션 보고서도 함께 만들었습니다.</li>
+              <li><b>전화 전환율은 실측으로.</b> 광고 중인 장례식장에서 광고로 들어온 사람은 21%가 전화 버튼을 눌렀고, 그냥 들어온 사람은 2.4%였습니다(약 9배). 표본이 작아 보고서에는 5%로 보수적으로 잡았습니다.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>진단 보고서 자동화 (Claude Code 스킬 · Python)</h4>
+            <p>입력은 홈페이지 주소 하나, 결과는 A4 4쪽 PDF입니다. AI 코딩 에이전트로 기획하고 검수하며 만들었습니다.</p>
+            <div class="tbl-wrap" style="margin-top:1rem">
+              <table class="pk">
+                <thead><tr><th>쪽</th><th>내용</th></tr></thead>
+                <tbody>
+                  <tr><td class="d">1쪽</td><td>단계별 광고 기대 효과. 상호·인근 → 지역 전체 → 무빈소·가족장 단계별 월 방문·광고비·전화 연결 수</td></tr>
+                  <tr><td class="d">2쪽</td><td>주변 장례식장 5곳과 17개 표준 항목 비교표</td></tr>
+                  <tr><td class="d">3쪽</td><td>했을 때와 안 했을 때. 빠진 항목, 갖추면 기대할 변화, 근거</td></tr>
+                  <tr><td class="d">4쪽</td><td>홈페이지 개선 방안, 추진 순서, 확인 요청 사항</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="personas" style="margin-top:1.2rem">
+              <div class="persona">
+                <p class="label">Playwright</p>
+                <b>휴대폰 화면으로 자동 점검</b>
+                <span>홈페이지 첫 화면과 메뉴 페이지 4개를 휴대폰 화면으로 열어 항목별로 점검합니다.</span>
+              </div>
+              <div class="persona">
+                <p class="label">네이버 검색광고 API</p>
+                <b>키워드별 검색수·입찰가·성과 예측</b>
+                <span>키워드별 검색수, 순위별 입찰가, 성과 예측을 받아 광고 기대 효과를 계산합니다.</span>
+              </div>
+              <div class="persona">
+                <p class="label">네이버 지역 검색 API</p>
+                <b>주변 장례식장 5곳 자동 선정</b>
+                <span>실제 좌표로 거리를 재서 10km 안 개별 홈페이지 → 같은 시군구 공공 장례식장 → 25km 안 순서로 고르고, 병원 홈페이지 속 한 페이지·열리지 않는 곳은 다음 후보로 바꿉니다.</span>
+              </div>
+              <div class="persona">
+                <p class="label">네이버 모바일 검색</p>
+                <b>검색 노출 확인</b>
+                <span>상단 광고와 광고가 아닌 결과에 홈페이지가 나오는지 확인합니다.</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4>표준 항목표 하나로 통합</h4>
+            <p>뿌리는 표준 항목표 파일 하나입니다. 주 항목 17개마다 등급(필수/권장), 자동 점검 방법, 영업용 확인 방법, 효과와 근거, 개선 문구를 담았습니다. 항목을 바꾸면 프로그램이 문서의 표를 다시 맞추고, 모든 항목 번호가 빠짐없이 들어갔는지 검사합니다.</p>
+            <div class="tbl-wrap" style="margin-top:1rem">
+              <table class="pk">
+                <thead><tr><th>갈래</th><th>누가</th><th>무엇에</th></tr></thead>
+                <tbody>
+                  <tr><td>진단 보고서</td><td>영업 → 장례식장</td><td>우리 홈페이지가 주변보다 무엇이 부족한지</td></tr>
+                  <tr><td>관리표</td><td>내부</td><td>진단할 때마다 장례식장별 O/X가 쌓임</td></tr>
+                  <tr><td>개발자용 기준서</td><td>개발</td><td>홈페이지를 만들거나 고칠 때 지킬 기준과 완료 확인 방법. AI에 그대로 넘겨 쓸 수 있게 작성</td></tr>
+                  <tr><td>영업용 점검표</td><td>영업</td><td>휴대폰으로 10분 안에 빠진 항목 확인</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="stack-k" style="margin:1.6rem 0 .5rem">17개 표준 항목</p>
+            <div class="tbl-wrap">
+              <table class="pk">
+                <thead><tr><th>영역</th><th>항목</th></tr></thead>
+                <tbody>
+                  <tr><td>검색에 나오기</td><td>1 상호 검색 시 홈페이지 · 2 지역 검색 시 홈페이지 · 3 검색 기본 설정 · 4 검색 등록 · 5 지도·e하늘 주소 일치</td></tr>
+                  <tr><td>열리고 보이기</td><td>6 3초 안에 열림 · 7 https · 8 휴대폰 화면 맞춤 · 9 카톡 공유 미리보기</td></tr>
+                  <tr><td>연락하기</td><td>10 전화 버튼 · 11 카카오톡·톡톡 상담</td></tr>
+                  <tr><td>결정을 돕기</td><td>12 비용 안내 · 13 비용 계산기 · 14 무빈소·가족장 · 15 빈소 현황</td></tr>
+                  <tr><td>광고·측정</td><td>16 광고 · 17 측정(GA4, 네이버 로그, 네이버 전환)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <h4>판정을 엄격하게 다듬었습니다</h4>
+            <div class="tbl-wrap">
+              <table class="pk">
+                <thead><tr><th>고친 것</th><th>전</th><th>후</th></tr></thead>
+                <tbody>
+                  <tr><td>병원 본 홈페이지</td><td>주변 장례식장 비교에 섞여 들어감</td><td><b>장례식장 전용 홈페이지가 아니면 비교에서 제외</b></td></tr>
+                  <tr><td>비용 안내</td><td>‘비용’이라는 낱말만 있으면 있음</td><td><b>금액이 글로 있어야 있음</b></td></tr>
+                  <tr><td>제목·H1·전화 버튼</td><td>느슨하게 판정</td><td><b>시군구명 포함, H1은 정확히 1개, 누르면 걸리는 tel: 링크만 인정</b></td></tr>
+                  <tr><td>효과 숫자</td><td>근거가 섞여 있음</td><td><b>당사 운영 통계 · 네이버 예측 · 공개 조사로 출처를 나눠 표기</b></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <h4>결과</h4>
+            <ul>
+              <li><b>의뢰처 10곳을 진단해 보고서를 냈습니다.</b> 사람이 조사하던 진단 1건이 주소 하나 넣고 5~10분에 끝나는 일이 됐습니다.</li>
+              <li><b>관리표에 56곳의 표준 항목 O/X가 쌓였습니다.</b> 진단할수록 장례식장별 현황이 자동으로 늘어납니다.</li>
+              <li><b>장례식장 홈페이지의 빈틈을 숫자로 보여 줄 수 있게 됐습니다.</b> 비용을 금액으로 안내하는 곳은 확인한 24곳 중 3곳, 카카오톡·톡톡 상담이 있는 곳은 37곳 중 2곳뿐이었습니다.</li>
+              <li><b>영업·개발·보고서가 같은 기준으로 말하게 됐습니다.</b> 영업 담당은 휴대폰으로 10분 안에 점검하고, 개발은 같은 번호의 기준서로 홈페이지를 고칩니다.</li>
+            </ul>
+          </div>
+          <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">기준이 하나여야 영업과 개발이 같은 말을 한다.</p><p>문서마다 항목과 판정이 다르면 같은 장례식장도 다르게 보입니다. 항목표 하나에서 보고서·기준서·점검표를 뽑아내자 진단은 빨라졌고, 영업이 약속한 것과 개발이 만드는 것이 일치하게 됐습니다.</p></aside>
+        </div>
+      </article>
+    <nav class="pager" aria-label="다른 프로젝트">
+      <a href="career.html#gaon-funeral"><span class="label">← 목록</span><b>가온프라임 / 장례·에어플라워 프로젝트</b></a>
+      <a href="career.html#gaon-funeral"><span class="label">목록 →</span><b>가온프라임 / 장례·에어플라워 프로젝트</b></a>
+    </nav>
+  </div>
+</section>
 <section class="proj-page" id="h-events" data-title="활성 사용자 분류와 무료 챗 소진 이벤트 설계" hidden>
   <div class="wrap">
     <p class="label crumb proj-crumb"><a href="career.html#gaon-himitsu">← 가온프라임 / Himitsuchat</a></p>
