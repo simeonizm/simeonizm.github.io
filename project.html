@@ -25,13 +25,85 @@
 </header>
 
 <main>
+<section class="proj-page" id="g-seo" data-title="검색 색인 구조 개선과 검색 유입 진단" hidden>
+  <div class="wrap">
+    <p class="label crumb proj-crumb"><a href="career.html#gaon-nordy">← 가온프라임 / Nordy</a></p>
+      <article class="project">
+        <div class="project-head">
+          <p class="label">Nordy · SEO · 2026.08 — 11</p>
+          <h1 class="ptitle">검색 색인 구조 개선과 검색 유입 진단</h1>
+          <span class="kpi">사이트맵 등록 페이지 약 270배</span>
+        </div>
+        <div class="highlights">
+          <p class="label hl-title">핵심 변화</p>
+          <div class="hl"><span class="hl-k">사이트맵에 등록된 페이지</span><div class="hl-v" aria-label="사이트맵 등록 페이지 1에서 약 270배로"><s>1</s><i aria-hidden="true">→</i><b>약 270배</b></div><span class="hl-n">공개 워크플로·EasyApp 상세를 4개 언어로 모두 등록</span></div>
+          <div class="hl"><span class="hl-k">목록에서 상세로 가는 링크</span><div class="hl-v" aria-label="목록 카드의 상세 링크 0개에서 전체 카드로"><s>0개</s><i aria-hidden="true">→</i><b>전체 카드</b></div><span class="hl-n">검색엔진이 따라갈 수 있는 길을 만듦</span></div>
+        </div>
+        <div class="pbody">
+          <div>
+            <h4>문제: 새 사용자를 데려올 페이지가 검색에 없었다</h4>
+            <p>검색 클릭의 <b>96.5%</b>가 이미 Nordy를 아는 브랜드 검색에서 나왔습니다. 일반 키워드 검색은 평균 16위대, 검색 2페이지에 머물렀습니다.</p>
+            <p style="margin-top:.8rem">처음 오는 사용자를 데려올 수 있는 건 워크플로·EasyApp 같은 개별 콘텐츠 페이지인데, 이 페이지들이 검색에 거의 잡히지 않았습니다.</p>
+            <p class="stack-k" style="margin:1.2rem 0 .5rem">검색 클릭 비중 (최근 28일)</p>
+            <div class="bars" role="img" aria-label="검색 클릭 비중: 브랜드 96.5%, 비브랜드 3.5%">
+              <div class="bar"><span class="k">브랜드 검색</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="v">96.5%</span></div>
+              <div class="bar"><span class="k">비브랜드 검색</span><span class="track"><span class="fill ghost" style="width:3.7%"></span></span><span class="v">3.5%</span></div>
+            </div>
+          </div>
+          <div>
+            <h4>진단: 검색 단계마다 막힌 곳을 찾았다</h4>
+            <div class="tbl-wrap">
+              <table class="pk">
+                <thead><tr><th>단계</th><th>발견한 문제</th><th>조치</th></tr></thead>
+                <tbody>
+                  <tr><td>발견</td><td>사이트맵에 상세 페이지가 하나도 없고, 목록 카드가 링크가 아닌 버튼이라 구글이 상세 페이지를 찾을 길이 없었습니다</td><td><b>사이트맵 자동 등록, 카드를 링크로 교체</b></td></tr>
+                  <tr><td>색인</td><td>주소 체계가 바뀐 뒤 옛 워크플로 주소가 404가 되어 색인에서 빠지고 있었고, 로그인·작업 화면 같은 불필요한 페이지가 색인돼 있었습니다</td><td><b>옛 주소를 새 주소로 1:1 연결, 불필요한 페이지 색인 제외</b></td></tr>
+                  <tr><td>클릭</td><td>핵심 유입 페이지 /comfyui의 제목이 ‘ComfyUI’ 한 단어뿐이고 설명이 없었습니다. 4~10위 클릭률이 3개월 내내 11~20위보다 낮았습니다</td><td><b>제목·설명·공유 미리보기 등 7개 항목 보강</b></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <h4>수행</h4>
+            <ul>
+              <li>Search Console 검색어를 월별로 나눠 받아 내려받기 행 수 제한을 피하고, 브랜드·비브랜드와 검색어 묶음(ComfyUI, 모델 파일명, 업스케일, 한국어)별 추이를 비교했습니다.</li>
+              <li>Search Console과 Mixpanel 오가닉 세션을 대조하되, 집계 방식이 달라 같은 숫자로 다루지 않았습니다.</li>
+              <li>Screaming Frog로 사이트 전체를 크롤하고 실제 화면 코드를 확인해 대표 주소, 다국어 설정, 제목 중복을 점검했습니다.</li>
+              <li>진단 결과를 우선순위별 11개 항목의 통합 개발 요청서로 정리해 개발팀에 전달했습니다.</li>
+              <li>ChatGPT·Claude·Perplexity에서 경쟁 서비스 13곳과 Nordy가 언급되는 비율을 재는 AI 검색 측정 기준선을 만들었습니다.</li>
+              <li>AI 툴 디렉토리 AlternativeTo에 Nordy를 등록해 외부 언급을 늘렸습니다.</li>
+              <li>사이트맵, 대표 주소, 다국어 설정, 주요 페이지 상태를 주간 점검 항목으로 만들어 주간 리포트로 운영하고 있습니다.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>성과: 상세 페이지가 검색엔진에 발견되기 시작했다</h4>
+            <p class="stack-k" style="margin-bottom:.5rem">사이트맵에 등록된 페이지 (개선 전 = 1)</p>
+            <div class="bars" role="img" aria-label="사이트맵 등록 페이지: 개선 전 1, 개선 후 약 270배">
+              <div class="bar"><span class="k">개선 전 (2026.08)</span><span class="track"><span class="fill ghost" style="width:1%"></span></span><span class="v">1</span></div>
+              <div class="bar"><span class="k">개선 후 (2026.09)</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="v">약 270배</span></div>
+            </div>
+            <ul style="margin-top:1.4rem">
+              <li>8월에는 상세 페이지가 ‘구글에 아직 알려지지 않은 URL’이었지만, 반영 뒤에는 사이트맵과 참조 페이지가 모두 감지됐습니다.</li>
+              <li>새 주소의 워크플로·EasyApp 상세 페이지가 4개 언어로 색인되기 시작했습니다.</li>
+            </ul>
+          </div>
+          <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">콘텐츠가 있어도 발견되지 않으면 없는 것과 같다.</p><p>워크플로 페이지는 수천 개였지만 검색엔진이 따라갈 링크가 없었습니다. 순위를 고치기 전에 발견·색인·클릭 중 어디서 막혔는지부터 확인해야 맞는 일을 먼저 할 수 있습니다.</p></aside>
+        </div>
+      </article>
+    <nav class="pager" aria-label="다른 프로젝트">
+      <a href="career.html#gaon-nordy"><span class="label">← 목록</span><b>가온프라임 / Nordy 프로젝트</b></a>
+      <a href="#g-signup"><span class="label">다음 프로젝트 →</span><b>가입 데이터 수집 오류 진단과 모니터링</b></a>
+    </nav>
+  </div>
+</section>
 <section class="proj-page" id="g-signup" data-title="가입 데이터 수집 오류 진단과 모니터링" hidden>
   <div class="wrap">
     <p class="label crumb proj-crumb"><a href="career.html#gaon-nordy">← 가온프라임 / Nordy</a></p>
       <article class="project">
         <div class="project-head">
-          <p class="label">Nordy · 데이터 품질</p>
+          <p class="label">Nordy · 데이터 품질 · 2026.10</p>
           <h1 class="ptitle">가입 데이터 수집 오류 진단과 모니터링</h1>
+          <span class="kpi">DB·GA4·Mixpanel 일별 대조 자동화</span>
         </div>
         <div class="pbody">
           <div>
@@ -48,7 +120,7 @@
             </ul>
           </div>
           <div>
-            <h4>결과 · 2026.10.01 — 14 가입 수 (운영 DB = 100)</h4>
+            <h4>진단 · 2026.10.01 — 14 가입 수 (운영 DB = 100)</h4>
             <div class="bars" role="img" aria-label="운영 DB 가입 수를 100으로 볼 때 GA4 86.7, Mixpanel 72.8">
               <div class="bar"><span class="k">운영 DB (실제 가입)</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="v">100</span></div>
               <div class="bar"><span class="k">GA4 (−13.3%)</span><span class="track"><span class="fill ghost" style="width:86.7%"></span></span><span class="v">86.7</span></div>
@@ -58,13 +130,12 @@
           <ul>
             <li>Mixpanel은 DB보다 27.2%, GA4는 13.3% 적었습니다. 격차는 9월 2일부터 나타났습니다.</li>
             <li>10월 14일 가입 계정을 하나씩 대조하니 약 70%만 Mixpanel 가입 이벤트가 있었습니다. 나머지 약 30% 중에도 다른 행동 이벤트나 생성 작업 기록이 있는 계정이 있어, 단순 미활동으로는 설명되지 않았습니다.</li>
-            <li>정확한 코드 원인은 별도 조사 과제로 넘겼습니다.</li>
           </ul>
           <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">숫자가 줄었다고 성과가 줄어든 것은 아니다.</p><p>가입 감소를 마케팅 문제로 단정하기 전에 실제 계정과 대조하자 수집 누락이 드러났습니다. 지표를 해석하기 전에 지표가 맞는지부터 확인해야 합니다.</p></aside>
         </div>
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
-      <a href="career.html#gaon-nordy"><span class="label">← 목록</span><b>가온프라임 / Nordy 프로젝트</b></a>
+      <a href="#g-seo"><span class="label">← 이전 프로젝트</span><b>검색 색인 구조 개선과 검색 유입 진단</b></a>
       <a href="#g-intent"><span class="label">다음 프로젝트 →</span><b>행동 기반 유료 전환 분석과 실험 기획</b></a>
     </nav>
   </div>
@@ -74,7 +145,7 @@
     <p class="label crumb proj-crumb"><a href="career.html#gaon-nordy">← 가온프라임 / Nordy</a></p>
       <article class="project">
         <div class="project-head">
-          <p class="label">Nordy · 전환 분석</p>
+          <p class="label">Nordy · 전환 분석 · 2026.08 — 09</p>
           <h1 class="ptitle">행동 기반 유료 전환 분석과 실험 기획</h1>
         </div>
         <div class="pbody">
@@ -92,7 +163,7 @@
             </ul>
           </div>
           <div>
-            <h4>결과 · 2026.08.19 — 09.13 행동 기준, 7일 내 첫 구매율</h4>
+            <h4>분석 결과 · 2026.08.19 — 09.13 행동 기준, 7일 내 첫 구매율</h4>
             <div class="bars" role="img" aria-label="7일 내 첫 구매율: 생성 1회 0.51%, 10회 1.22%, 25회 1.64%">
               <div class="bar"><span class="k">생성 1회 도달</span><span class="track"><span class="fill ghost" style="width:31.1%"></span></span><span class="v">0.51%</span></div>
               <div class="bar"><span class="k">생성 10회 도달</span><span class="track"><span class="fill" style="width:74.4%"></span></span><span class="v">1.22%</span></div>
@@ -101,7 +172,6 @@
           </div>
           <ul>
             <li>10회·25회 도달 집단의 구매율은 1회 기준보다 각각 약 2.4배·3.2배 높았습니다.</li>
-            <li>첫 완료 기능별 차이도 있었지만 첫 구매 표본이 작아 방향성으로만 해석했습니다. 크레딧 사용량은 완료 작업 기준 근사값입니다.</li>
           </ul>
           <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">구매 신호는 반복 사용에서 나온다.</p><p>생성을 거듭한 이용자일수록 첫 구매율이 높았습니다. 결제 안내는 모두에게 같은 시점이 아니라 몰입이 쌓인 순간에 보여줘야 합니다.</p></aside>
         </div>
@@ -157,55 +227,6 @@
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
       <a href="#g-intent"><span class="label">← 이전 프로젝트</span><b>행동 기반 유료 전환 분석과 실험 기획</b></a>
-      <a href="#g-seo"><span class="label">다음 프로젝트 →</span><b>검색 유입 진단과 주간 성과 점검</b></a>
-    </nav>
-  </div>
-</section>
-<section class="proj-page" id="g-seo" data-title="검색 유입 진단과 주간 성과 점검" hidden>
-  <div class="wrap">
-    <p class="label crumb proj-crumb"><a href="career.html#gaon-nordy">← 가온프라임 / Nordy</a></p>
-      <article class="project">
-        <div class="project-head">
-          <p class="label">Nordy · SEO</p>
-          <h1 class="ptitle">검색 유입 진단과 주간 성과 점검</h1>
-        </div>
-        <div class="pbody">
-          <div>
-            <h4>배경</h4>
-            <p>검색에 노출되는 페이지가 늘어도 신규 고객 유입은 충분히 늘지 않았습니다. 브랜드를 이미 아는 고객과 일반 키워드로 처음 발견하는 고객을 구분하는 것이 핵심이었습니다.</p>
-          </div>
-          <div>
-            <h4>수행</h4>
-            <ul>
-              <li>Search Console의 노출·클릭·검색어·페이지와 Mixpanel 오가닉 세션을 대조했습니다. 둘은 다른 집계라 같은 숫자로 다루지 않았습니다.</li>
-              <li>브랜드·비브랜드 검색, 노출 페이지·클릭 발생 페이지를 나눴습니다.</li>
-              <li>ComfyUI·워크플로·EasyApp 페이지의 검색 의도와 설명 콘텐츠를 검토했습니다.</li>
-              <li>사이트맵, 대표 URL, 다국어 설정, 주요 페이지 상태를 주간 점검 항목으로 만들고 주간 리포트로 운영했습니다.</li>
-            </ul>
-          </div>
-          <div>
-            <h4>결과 · 최근 28일 검색 클릭 비중</h4>
-            <div class="bars" role="img" aria-label="검색 클릭 비중: 브랜드 96.5%, 비브랜드 3.5%">
-              <div class="bar"><span class="k">브랜드 검색</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="v">96.5%</span></div>
-              <div class="bar"><span class="k">비브랜드 검색</span><span class="track"><span class="fill ghost" style="width:3.7%"></span></span><span class="v">3.5%</span></div>
-            </div>
-          </div>
-          <div class="kpis">
-            <div><b>+49%</b><span>검색 노출 페이지 수</span></div>
-            <div><b>+5%</b><span>클릭이 발생한 페이지 수</span></div>
-          </div>
-          <div>
-            <h4>페이지 수 변화 (이전 구간 = 100)</h4>
-            <div class="bars" role="img" aria-label="이전 구간을 100으로 볼 때 노출 페이지 149, 클릭 발생 페이지 105">
-              <div class="bar"><span class="k">검색 노출 페이지</span><span class="track"><span class="fill" style="width:100.0%"></span></span><span class="v">149</span></div>
-              <div class="bar"><span class="k">클릭 발생 페이지</span><span class="track"><span class="fill ghost" style="width:70.5%"></span></span><span class="v">105</span></div>
-            </div>
-          </div>
-          <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">검색 클릭이 늘어도 새 고객이 늘지는 않는다.</p><p>클릭 대부분이 이미 브랜드를 아는 사람에게서 나왔습니다. 신규 유입을 키우려면 브랜드 밖의 일반 키워드에서 발견되는 페이지가 필요합니다.</p></aside>
-        </div>
-      </article>
-    <nav class="pager" aria-label="다른 프로젝트">
-      <a href="#g-country"><span class="label">← 이전 프로젝트</span><b>국가별 퍼널 분석과 해외 광고 운영안</b></a>
       <a href="#g-events"><span class="label">다음 프로젝트 →</span><b>제품 분석 이벤트와 결제 데이터 개선 설계</b></a>
     </nav>
   </div>
@@ -230,14 +251,12 @@
               <li>생성 요청 10회·25회 도달을 계정 누적 기준 인게이지먼트 단계로 설계하고, 반복 발송 방지 기준을 문서화했습니다.</li>
               <li>최초 구독·갱신·재구독과 실패 결제 재시도를 구분하는 데이터 구조를 제안했습니다.</li>
               <li>크레딧 종류, 지급 사유, 중복 지급 방지, 광고 유입과 주문 연결에 필요한 항목을 개발 요구사항으로 정리했습니다.</li>
+              <li>로그인 직후 페이지 조회에 사용자 ID가 빠지던 GA4 문제를, 페이지 조회 태그를 첫 로드용과 화면 전환용으로 나눠 바로잡았습니다.</li>
+              <li>알림 클릭 이벤트를 알림 종류와 노출 위치 기준으로 설계하고 GTM에 직접 세팅했습니다.</li>
             </ul>
           </div>
-          <div class="kpis">
-            <div><b>3.12%</b><span>결제 문서가 연결된 실패 주문 비율</span></div>
-            <div><b>약 20%</b><span>GA 식별 정보가 있는 성공 구독 주문 비율</span></div>
-          </div>
           <div>
-            <h4>데이터 연결 상태</h4>
+            <h4>진단: 결제 데이터 연결 상태</h4>
             <div class="stack-wrap"><p class="stack-k">실패 주문 중 결제 문서 연결</p><div class="stack" role="img" aria-label="실패 주문 중 결제 문서 연결 3.12%, 미연결 96.88%"><span class="s1" style="width:3.12%"></span><span class="s2" style="width:96.88%"></span></div><div class="legend"><span><i class="s1"></i>연결 3.12%</span><span><i class="s2"></i>미연결 96.88%</span></div></div>
             <div class="stack-wrap"><p class="stack-k">성공 구독 주문 중 GA 식별 정보</p><div class="stack" role="img" aria-label="성공 구독 주문 중 GA 식별 정보 있음 약 20%, 없음 약 80%"><span class="s1" style="width:20%"></span><span class="s2" style="width:80%"></span></div><div class="legend"><span><i class="s1"></i>있음 20%</span><span><i class="s2"></i>없음 80%</span></div></div>
           </div>
@@ -245,7 +264,69 @@
         </div>
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
-      <a href="#g-seo"><span class="label">← 이전 프로젝트</span><b>검색 유입 진단과 주간 성과 점검</b></a>
+      <a href="#g-country"><span class="label">← 이전 프로젝트</span><b>국가별 퍼널 분석과 해외 광고 운영안</b></a>
+      <a href="#g-ccp"><span class="label">다음 프로젝트 →</span><b>크리에이터 프로그램(CCP) 기획·운영과 추천 성과 추적</b></a>
+    </nav>
+  </div>
+</section>
+<section class="proj-page" id="g-ccp" data-title="크리에이터 프로그램(CCP) 기획·운영과 추천 성과 추적" hidden>
+  <div class="wrap">
+    <p class="label crumb proj-crumb"><a href="career.html#gaon-nordy">← 가온프라임 / Nordy</a></p>
+      <article class="project">
+        <div class="project-head">
+          <p class="label">Nordy · 크리에이터 마케팅 · 2026.08</p>
+          <h1 class="ptitle">크리에이터 프로그램(CCP) 기획·운영과 추천 성과 추적</h1>
+          <span class="kpi">모집부터 추천 가입까지 한 흐름으로 측정</span>
+        </div>
+        <div class="pbody">
+          <div>
+            <h4>배경</h4>
+            <p>Nordy의 워크플로와 EasyApp은 사용자가 직접 만들어 올리는 콘텐츠입니다. 잘 만드는 크리에이터가 늘수록 볼거리와 신규 유입이 함께 늘어나기 때문에, 크리에이터를 모으고 꾸준히 활동하게 만드는 프로그램이 필요했습니다.</p>
+            <p style="margin-top:.8rem">동시에 크리에이터가 실제로 몇 명을 데려왔는지 셀 수 없으면 보상과 선정 기준을 정할 수 없었습니다.</p>
+          </div>
+          <div>
+            <h4>수행</h4>
+            <div class="personas">
+              <div class="persona">
+                <p class="label">기획</p>
+                <b>활동이 쌓일수록 커지는 혜택</b>
+                <span>크리에이터 등급에 따라 콘텐츠 활동 기준과 혜택을 단계별로 나눈 운영 정책을 설계했습니다. 처음부터 큰 의무를 주지 않고 활동이 쌓일수록 혜택이 커지게 했습니다.</span>
+              </div>
+              <div class="persona">
+                <p class="label">모집 · 운영</p>
+                <b>신청 페이지로 모집하고 직접 운영</b>
+                <span>/partners 신청 페이지로 크리에이터를 모집하고 신청 검토와 선정, 크리에이터 안내를 맡았습니다. 신청서 제출은 GA4 이벤트로 측정했고, 태그가 발동하지 않던 문제를 찾아 바로잡았습니다.</span>
+              </div>
+              <div class="persona">
+                <p class="label">마무리</p>
+                <b>추천 코드로 기여를 숫자로</b>
+                <span>크리에이터별 추천 코드로 들어온 가입을 Mixpanel에서 바로 확인할 수 있게 해 프로그램 성과를 측정하는 단계까지 완성했습니다.</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4>추천 코드 추적 설계</h4>
+            <ul>
+              <li>추천 코드는 가입 이벤트 속성과 사용자 속성(최초 1회만 기록) 두 곳에 남겼습니다. 가입 시점의 기여와 그 뒤의 생성·결제를 모두 크리에이터 기준으로 묶어 볼 수 있습니다.</li>
+              <li>쿠키를 새로 읽지 않고 백엔드가 이미 가진 추천 정보를 쓰게 해, 프론트 개발 없이 적용했습니다.</li>
+              <li>속성은 ‘추천 코드’와 ‘크리에이터 경유 여부’ 2개로 줄이고, 용도가 불분명한 값은 넣지 않았습니다.</li>
+            </ul>
+            <div class="tbl-wrap" style="margin-top:1.2rem">
+              <table class="pk">
+                <thead><tr><th>단계</th><th>측정</th><th>볼 수 있는 것</th></tr></thead>
+                <tbody>
+                  <tr><td>모집</td><td>신청서 제출 이벤트</td><td>신청 수와 신청자의 유입 경로</td></tr>
+                  <tr><td>추천 가입</td><td>가입 이벤트 + 추천 코드</td><td>크리에이터별 데려온 가입자</td></tr>
+                  <tr><td>이후 행동</td><td>사용자 속성 ‘크리에이터 경유’</td><td>추천 가입자의 생성·결제</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">파트너 프로그램은 측정이 붙을 때 완성된다.</p><p>크리에이터를 모으는 것까지는 쉽지만, 누가 누구를 데려왔는지 셀 수 없으면 보상도 선정도 감으로 하게 됩니다. 모집부터 추천 가입, 이후 행동까지 하나로 이어 크리에이터 성과를 숫자로 판단할 수 있게 했습니다.</p></aside>
+        </div>
+      </article>
+    <nav class="pager" aria-label="다른 프로젝트">
+      <a href="#g-events"><span class="label">← 이전 프로젝트</span><b>제품 분석 이벤트와 결제 데이터 개선 설계</b></a>
       <a href="#g-crm"><span class="label">다음 프로젝트 →</span><b>CRM 이메일 자동화와 개인화 타깃팅 기획</b></a>
     </nav>
   </div>
@@ -255,7 +336,7 @@
     <p class="label crumb proj-crumb"><a href="career.html#gaon-nordy">← 가온프라임 / Nordy</a></p>
       <article class="project">
         <div class="project-head">
-          <p class="label">Nordy · CRM</p>
+          <p class="label">Nordy · CRM · 2026.08</p>
           <h1 class="ptitle">CRM 이메일 자동화와 개인화 타깃팅 기획</h1>
         </div>
         <div class="pbody">
@@ -263,15 +344,10 @@
             <h4>배경</h4>
             <p>신규 모델과 공식 워크플로 출시 이메일을 반복 제작하면서, 누구에게 어떤 콘텐츠를 보내고 발송 후 무엇을 성과로 볼지 정리해야 했습니다. 단순 뉴스레터를 제품 사용으로 연결하는 CRM 구조가 목적이었습니다.</p>
           </div>
-          <div class="bars" role="img" aria-label="2026년 8월 24일 기준 전체 사용자 대비 마케팅 동의자 약 3.2%, 1차 발송 후보 약 3.2%">
-            <div class="bar"><span class="k">전체 사용자</span><span class="track"><span class="fill ghost" style="width:100%"></span></span><span class="v">100%</span></div>
-            <div class="bar"><span class="k">마케팅 동의</span><span class="track"><span class="fill" style="width:3.2%"></span></span><span class="v">3.2%</span></div>
-            <div class="bar"><span class="k">1차 발송 후보</span><span class="track"><span class="fill" style="width:3.2%"></span></span><span class="v">3.2%</span></div>
-          </div>
           <div>
             <h4>수행</h4>
             <ul>
-              <li>마케팅 동의, 이메일 유효성, 탈퇴 진행 상태를 적용해 1차 발송 후보를 산정했습니다 (2026.08.24 기준, 실제 발송 전 수신거부·반송 추가 제외 필요).</li>
+              <li>마케팅 동의, 이메일 유효성, 탈퇴 진행 상태를 적용해 1차 발송 후보를 산정했습니다 (2026.08.24 기준).</li>
               <li>온보딩 응답 완성도와 중복을 점검했습니다. 후보 중 전체 응답은 약 40%, 일부 응답은 약 60%였고, 일부 응답자는 기본 세그먼트 값보다 실제 사용 행동을 우선하도록 기준을 세웠습니다.</li>
               <li>운영자 릴리스 선택 → 이미지·카피 초안 생성 → 대상 확인 → 테스트 메일 → 승인 → 예약 발송 흐름을 설계했습니다.</li>
               <li>출시 공지, 첫 생성 유도, 실패 복구, 두 번째 사용, 7일·21일 휴면 복귀 시나리오를 우선순위별로 정리했습니다.</li>
@@ -286,7 +362,7 @@
         </div>
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
-      <a href="#g-events"><span class="label">← 이전 프로젝트</span><b>제품 분석 이벤트와 결제 데이터 개선 설계</b></a>
+      <a href="#g-ccp"><span class="label">← 이전 프로젝트</span><b>크리에이터 프로그램(CCP) 기획·운영과 추천 성과 추적</b></a>
       <a href="#g-credit"><span class="label">다음 프로젝트 →</span><b>무료 크레딧 소진과 재이용 행동 분석</b></a>
     </nav>
   </div>
@@ -318,57 +394,104 @@
             <div><b>32.0일</b><span>재이용이 확인된 사례의 평균 복귀 (중앙값 29.3)</span></div>
             <div><b>60.99%</b><span>첫 구독 30일 보너스 평균 사용률 (약 370명)</span></div>
           </div>
-          <div>
-            <h4>검증 지표</h4>
-            <div class="bars" role="img" aria-label="최종 표본 약 77%, 차감 로그 일치율 100%, 보너스 사용률 60.99%">
-              <div class="bar"><span class="k">최종 표본 (후보 대비)</span><span class="track"><span class="fill ghost" style="width:77.0%"></span></span><span class="v">약 77%</span></div>
-              <div class="bar"><span class="k">차감 로그 일치율</span><span class="track"><span class="fill" style="width:100.0%"></span></span><span class="v">100%</span></div>
-              <div class="bar"><span class="k">첫 구독 보너스 사용률</span><span class="track"><span class="fill" style="width:61.0%"></span></span><span class="v">60.99%</span></div>
-            </div>
-          </div>
           <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">분모를 정하는 순간 결론이 정해진다.</p><p>재방문을 무엇으로, 누구 중에서 세느냐에 따라 같은 데이터가 다른 이야기를 합니다. 돌아온 사람만의 평균을 전체 평균처럼 말하지 않는 것이 정책 판단의 출발점입니다.</p></aside>
         </div>
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
       <a href="#g-crm"><span class="label">← 이전 프로젝트</span><b>CRM 이메일 자동화와 개인화 타깃팅 기획</b></a>
-      <a href="#g-abuse"><span class="label">다음 프로젝트 →</span><b>무료 크레딧 어뷰징 탐지 정책과 과거 데이터 검증</b></a>
+      <a href="#g-abuse"><span class="label">다음 프로젝트 →</span><b>무료 크레딧 어뷰징 탐지와 정지·이의제기 운영</b></a>
     </nav>
   </div>
 </section>
-<section class="proj-page" id="g-abuse" data-title="무료 크레딧 어뷰징 탐지 정책과 과거 데이터 검증" hidden>
+<section class="proj-page" id="g-abuse" data-title="무료 크레딧 어뷰징 탐지와 정지·이의제기 운영" hidden>
   <div class="wrap">
     <p class="label crumb proj-crumb"><a href="career.html#gaon-nordy">← 가온프라임 / Nordy</a></p>
       <article class="project">
         <div class="project-head">
-          <p class="label">Nordy · 정책 설계</p>
-          <h1 class="ptitle">무료 크레딧 어뷰징 탐지 정책과 과거 데이터 검증</h1>
+          <p class="label">Nordy · 정책 설계 · 운영 · 2026.08</p>
+          <h1 class="ptitle">무료 크레딧 어뷰징 탐지와 정지·이의제기 운영</h1>
+          <span class="kpi">전체 사용자의 약 10% 어뷰징 계정 탐지·정지</span>
+        </div>
+        <div class="highlights">
+          <p class="label hl-title">핵심 변화</p>
+          <div class="hl"><span class="hl-k">탐지·정지한 어뷰징 계정</span><div class="hl-v" aria-label="전체 사용자의 약 10%"><b>약 10%</b></div><span class="hl-n">전체 사용자 대비, 무료 크레딧 재수령 즉시 차단</span></div>
+          <div class="hl"><span class="hl-k">오탐 해제 경로</span><div class="hl-v" aria-label="없음에서 이메일 이의제기로"><s>없음</s><i aria-hidden="true">→</i><b>이메일 이의제기</b></div><span class="hl-n">정상 사용자는 확인 후 바로 해제</span></div>
         </div>
         <div class="pbody">
           <div>
-            <h4>배경</h4>
-            <p>무료 크레딧을 반복 수령하는 다계정 행위를 찾으면서 정상 헤비유저는 방해하지 않는 기준이 필요했습니다. 빠른 사용이나 같은 IP만으로 판단하면 정상 사용자가 피해를 볼 수 있어 여러 연결 근거가 필요했습니다.</p>
+            <h4>문제: 새 계정만 만들면 무료 크레딧을 다시 받을 수 있었다</h4>
+            <p>Nordy는 매달 무료 2,500크레딧을 지급합니다. 크레딧을 빠르게 다 쓰고 새 계정을 만들어 다시 받는 다계정 패턴이 의심됐습니다.</p>
+            <p style="margin-top:.8rem">하지만 빠른 사용이나 같은 IP만으로 막으면 열심히 쓰는 정상 사용자까지 피해를 봅니다. <b>남용은 확실히 막고, 정상 사용자는 잘못 막지 않는 기준</b>이 필요했습니다.</p>
+            <p class="stack-k" style="margin:1.2rem 0 .5rem">기존 기록만으로 판단할 수 있었던 가입 계정</p>
+            <div class="stack-wrap"><div class="stack" role="img" aria-label="판단 근거 부족 75.69%, 판단 가능 24.31%"><span class="s2" style="width:75.69%"></span><span class="s1" style="width:24.31%"></span></div><div class="legend"><span><i class="s2"></i>판단 근거 부족 75.69%</span><span><i class="s1"></i>판단 가능 24.31%</span></div></div>
+            <p style="margin-top:1rem">과거 데이터에 탐지 조건을 적용해 보니 4개 중 3개 계정은 판단할 기록 자체가 없었습니다. 그래서 차단 기준보다 <b>판단에 필요한 신호를 먼저 확보</b>하는 것부터 시작했습니다.</p>
           </div>
           <div>
-            <h4>수행</h4>
-            <ul>
-              <li>빠른 크레딧 사용, 기존 계정과의 연결, 이후 신규 계정 생성이 함께 나타나는 패턴을 중심으로 탐지 기준을 설계했습니다.</li>
-              <li>이메일·기기·IP·워크플로 신호의 역할과 한계를 정리했습니다.</li>
-              <li>정상·의심·제한·해제 운영 단계와 관리자 검토, 이의제기 흐름을 문서화했습니다.</li>
-              <li>실제 제한 전에 결과만 계산하는 시험 운영 방식을 제안했습니다.</li>
-              <li>2026년 3~6월 가입자에게 탐지 조건을 과거 데이터로 적용해 재현 가능성을 검증했습니다.</li>
+            <h4>탐지 신호: 무엇을 보고, 어떤 기준으로 잡았나</h4>
+            <div class="tbl-wrap">
+              <table class="pk">
+                <thead><tr><th>신호</th><th>보는 것</th><th>기준</th></tr></thead>
+                <tbody>
+                  <tr><td>크레딧 소진 속도</td><td>무료 크레딧을 받은 뒤 얼마나 빨리 다 썼는지</td><td>정상 사용자는 한 달에 무료 크레딧의 <b>평균 40.36%</b>만 씁니다. 이월이 사라진 4~6월을 기준선으로 삼아, 이보다 훨씬 빠르게 바닥내는 계정을 신호로 봤습니다</td></tr>
+                  <tr><td>소진 뒤 새 계정</td><td>크레딧을 다 쓴 직후 새 계정이 생겼는지</td><td>‘소진 → 새 가입 → 다시 지급’ 순서가 이어질 때만 다계정 연결로 봤습니다</td></tr>
+                  <tr><td>기기</td><td>서비스가 직접 심은 기기 ID와 브라우저 정보</td><td>같은 기기에서 여러 계정이 무료 크레딧을 받았는지. 원본 값 대신 암호화한 값만 저장했습니다</td></tr>
+                  <tr><td>이메일</td><td>메일 도메인과 가입 경로</td><td>대량 생성이 쉬운 메일 경로에 가중치를 두되, 영어·브라질 포르투갈어·인도·이집트권 <b>업무용 메일 예외 목록</b>을 만들어 정상 회사 메일은 걸리지 않게 했습니다</td></tr>
+                  <tr><td>IP</td><td>접속 IP</td><td>공용 와이파이·회사망 때문에 오탐이 많아 <b>보조 신호로만</b> 쓰고, IP 하나로는 제한하지 않았습니다</td></tr>
+                  <tr><td>워크플로</td><td>작업한 워크플로가 이전 계정과 겹치는지</td><td>다른 신호를 뒷받침하는 행동 근거로만 썼습니다</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul style="margin-top:1.2rem">
+              <li><b>점수로 판정했습니다.</b> 신호마다 점수를 매겨 합산하고, 합계에 따라 정상 · 의심 · 제한 세 단계로 나눴습니다.</li>
+              <li><b>세 가지가 겹쳐야 제한했습니다.</b> 빠른 소진, 기존 계정과의 연결(기기·이메일), 소진 뒤 새 계정 생성이 함께 나타난 계정만 제한 대상으로 올렸습니다.</li>
+              <li><b>새 규칙은 그림자로 먼저 돌렸습니다.</b> 새 기준은 기존 규칙 옆에서 결과만 계산하게 해, 실제 제재 전에 몇 명이 걸리는지와 오탐 여부를 확인했습니다.</li>
             </ul>
           </div>
-          <div class="kpis">
-            <div><b>75.69%</b><span>판단 근거가 부족한 계정 비율</span></div>
-            <div><b>약 13만 건</b><span>불러온 무료 지급</span></div>
-            <div><b>약 66%</b><span>로그와 잔액이 일치한 지급 비율</span></div>
+          <div>
+            <h4>설계: 여러 증거가 겹칠 때만 움직인다</h4>
+            <div class="personas">
+              <div class="persona">
+                <p class="label">탐지</p>
+                <b>신호 하나로는 판단하지 않는다</b>
+                <span>신호마다 역할과 한계를 나눠, 핵심 신호 세 가지가 겹친 계정만 제한 대상으로 올렸습니다.</span>
+              </div>
+              <div class="persona">
+                <p class="label">검증</p>
+                <b>막기 전에 먼저 돌려본다</b>
+                <span>실제 제한 없이 결과만 계산하는 시험 운영으로 시작하고, 2026년 3~6월 가입자에게 조건을 적용해 같은 결과가 재현되는지 확인했습니다.</span>
+              </div>
+              <div class="persona">
+                <p class="label">제재</p>
+                <b>정지는 빠르게, 해제는 열어 두고</b>
+                <span>어뷰징 계정은 먼저 정지해 크레딧 재수령을 바로 막고, 이메일 이의제기로 정상 사용자가 스스로 정지를 풀 수 있는 길을 만들어 오탐을 막았습니다.</span>
+              </div>
+            </div>
           </div>
           <div>
-            <h4>판단 가능성</h4>
-            <div class="stack-wrap"><p class="stack-k">가입 계정</p><div class="stack" role="img" aria-label="판단 근거 부족 75.69%, 판단 가능 24.31%"><span class="s2" style="width:75.69%"></span><span class="s1" style="width:24.31%"></span></div><div class="legend"><span><i class="s2"></i>판단 근거 부족 75.69%</span><span><i class="s1"></i>판단 가능 24.31%</span></div></div>
-            <div class="stack-wrap"><p class="stack-k">무료 크레딧 지급 로그</p><div class="stack" role="img" aria-label="로그와 잔액 일치 약 66%, 불완전 약 34%"><span class="s1" style="width:66%"></span><span class="s2" style="width:34%"></span></div><div class="legend"><span><i class="s1"></i>잔액 일치 66%</span><span><i class="s2"></i>로그 불완전 34%</span></div></div>
+            <h4>운영 흐름</h4>
+            <div class="tbl-wrap">
+              <table class="pk">
+                <thead><tr><th>단계</th><th>내용</th></tr></thead>
+                <tbody>
+                  <tr><td>1. 탐지</td><td>여러 신호가 겹친 계정을 어뷰징 계정으로 분류</td></tr>
+                  <tr><td>2. 정지</td><td><b>계정을 먼저 정지</b>해 무료 크레딧 추가 수령을 즉시 차단</td></tr>
+                  <tr><td>3. 이의제기</td><td>정지 안내 이메일로 이의제기 접수, 관리자가 근거 기록을 다시 검토</td></tr>
+                  <tr><td>4. 해제 또는 유지</td><td>정상 사용자로 확인되면 <b>바로 해제</b>, 결과는 다음 탐지 기준 개선에 반영</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">‘0명’은 ‘없음’이 아니라 ‘모름’일 수 있다.</p><p>탐지 결과가 비어 있던 이유는 어뷰징이 없어서가 아니라 판단할 기록이 없어서였습니다. 좋은 정책은 차단 기준보다 필요한 데이터를 먼저 확보하는 데서 시작합니다.</p></aside>
+          <div>
+            <h4>성과: 전체 사용자의 약 10%를 걸러냈다</h4>
+            <p class="stack-k" style="margin-bottom:.5rem">전체 사용자 중 어뷰징으로 탐지·정지한 계정</p>
+            <div class="stack-wrap"><div class="stack" role="img" aria-label="어뷰징 정지 약 10%, 정상 약 90%"><span class="s1" style="width:10%"></span><span class="s2" style="width:90%"></span></div><div class="legend"><span><i class="s1"></i>어뷰징 정지 약 10%</span><span><i class="s2"></i>정상 약 90%</span></div></div>
+            <ul style="margin-top:1.4rem">
+              <li><b>남용은 즉시 막았습니다.</b> 정지를 먼저 걸어 새 계정으로 무료 크레딧을 다시 받는 흐름을 끊었습니다.</li>
+              <li><b>오탐은 되돌릴 수 있게 했습니다.</b> 이메일 이의제기로 정상 사용자가 스스로 해제를 요청할 수 있어, 강한 제재와 사용자 보호를 함께 가져갔습니다.</li>
+              <li><b>기준은 계속 좋아지게 했습니다.</b> 이의제기 결과를 다시 탐지 기준에 반영하는 구조로 운영합니다.</li>
+            </ul>
+          </div>
+          <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">막는 것보다 잘못 막지 않는 것이 어렵다.</p><p>어뷰징 탐지는 차단 기준만큼 되돌리는 길이 중요합니다. 여러 증거가 겹칠 때만 정지하고 이메일 이의제기로 해제 경로를 열어 두자, 정상 사용자를 지키면서 무료 크레딧 남용을 막을 수 있었습니다.</p></aside>
         </div>
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
@@ -408,7 +531,7 @@
         </div>
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
-      <a href="#g-abuse"><span class="label">← 이전 프로젝트</span><b>무료 크레딧 어뷰징 탐지 정책과 과거 데이터 검증</b></a>
+      <a href="#g-abuse"><span class="label">← 이전 프로젝트</span><b>무료 크레딧 어뷰징 탐지와 정지·이의제기 운영</b></a>
       <a href="career.html#gaon-nordy"><span class="label">목록 →</span><b>가온프라임 / Nordy 프로젝트</b></a>
     </nav>
   </div>
