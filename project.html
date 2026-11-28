@@ -91,93 +91,7 @@
         </div>
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
-      <a href="career.html#gaon-nordy"><span class="label">← 목록</span><b>가온프라임 / Nordy 프로젝트</b></a>
-      <a href="#g-signup"><span class="label">다음 프로젝트 →</span><b>가입 데이터 수집 오류 진단과 모니터링</b></a>
-    </nav>
-  </div>
-</section>
-<section class="proj-page" id="g-signup" data-title="가입 데이터 수집 오류 진단과 모니터링" hidden>
-  <div class="wrap">
-    <p class="label crumb proj-crumb"><a href="career.html#gaon-nordy">← 가온프라임 / Nordy</a></p>
-      <article class="project">
-        <div class="project-head">
-          <p class="label">Nordy · 데이터 품질 · 2026.10</p>
-          <h1 class="ptitle">가입 데이터 수집 오류 진단과 모니터링</h1>
-          <span class="kpi">DB·GA4·Mixpanel 일별 대조 자동화</span>
-        </div>
-        <div class="pbody">
-          <div>
-            <h4>배경</h4>
-            <p>Nordy 운영 DB의 실제 가입 수와 Mixpanel 가입 이벤트 수가 크게 달랐습니다. 가입 지표가 왜곡되면 채널 성과와 가입 전환율을 잘못 판단하게 되므로, 집계 기준 차이인지 실제 수집 부족인지 가려야 했습니다.</p>
-          </div>
-          <div>
-            <h4>수행</h4>
-            <ul>
-              <li>MongoDB의 가입 계정과 탈퇴 계정 보관 데이터를 한국 시간 기준으로 집계해 GA4·Mixpanel의 같은 날짜 가입 이벤트와 대조했습니다.</li>
-              <li>월별·일별 추이로 격차가 시작된 구간을 좁히고, 특정 일자의 DB 계정과 이벤트 사용자 식별자를 직접 비교했습니다.</li>
-              <li>누락 계정의 다른 행동 이벤트와 생성 작업 이력을 확인해 비활동 사용자만의 현상인지 검증했습니다.</li>
-              <li>DB·GA4·Mixpanel 일별 대조와 이상 징후 알림을 자동화했습니다. 직전 7일 대비 변화, 수집 중단, 중복 알림 방지 조건을 넣었습니다.</li>
-            </ul>
-          </div>
-          <div>
-            <h4>진단 · 2026.10.01 — 14 가입 수 (운영 DB = 100)</h4>
-            <div class="bars" role="img" aria-label="운영 DB 가입 수를 100으로 볼 때 GA4 86.7, Mixpanel 72.8">
-              <div class="bar"><span class="k">운영 DB (실제 가입)</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="v">100</span></div>
-              <div class="bar"><span class="k">GA4 (−13.3%)</span><span class="track"><span class="fill ghost" style="width:86.7%"></span></span><span class="v">86.7</span></div>
-              <div class="bar"><span class="k">Mixpanel (−27.2%)</span><span class="track"><span class="fill ghost" style="width:72.8%"></span></span><span class="v">72.8</span></div>
-            </div>
-          </div>
-          <ul>
-            <li>Mixpanel은 DB보다 27.2%, GA4는 13.3% 적었습니다. 격차는 9월 2일부터 나타났습니다.</li>
-            <li>10월 14일 가입 계정을 하나씩 대조하니 약 70%만 Mixpanel 가입 이벤트가 있었습니다. 나머지 약 30% 중에도 다른 행동 이벤트나 생성 작업 기록이 있는 계정이 있어, 단순 미활동으로는 설명되지 않았습니다.</li>
-          </ul>
-          <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">숫자가 줄었다고 성과가 줄어든 것은 아니다.</p><p>가입 감소를 마케팅 문제로 단정하기 전에 실제 계정과 대조하자 수집 누락이 드러났습니다. 지표를 해석하기 전에 지표가 맞는지부터 확인해야 합니다.</p></aside>
-        </div>
-      </article>
-    <nav class="pager" aria-label="다른 프로젝트">
-      <a href="#g-seo"><span class="label">← 이전 프로젝트</span><b>검색 색인 구조 개선과 검색 유입 진단</b></a>
-      <a href="#g-intent"><span class="label">다음 프로젝트 →</span><b>행동 기반 유료 전환 분석과 실험 기획</b></a>
-    </nav>
-  </div>
-</section>
-<section class="proj-page" id="g-intent" data-title="행동 기반 유료 전환 분석과 실험 기획" hidden>
-  <div class="wrap">
-    <p class="label crumb proj-crumb"><a href="career.html#gaon-nordy">← 가온프라임 / Nordy</a></p>
-      <article class="project">
-        <div class="project-head">
-          <p class="label">Nordy · 전환 분석 · 2026.08 — 09</p>
-          <h1 class="ptitle">행동 기반 유료 전환 분석과 실험 기획</h1>
-        </div>
-        <div class="pbody">
-          <div>
-            <h4>배경</h4>
-            <p>무료 이용자에게 언제 유료 상품을 안내할지 판단할 근거가 필요했습니다. 모두에게 같은 메시지를 보이기보다 구매 가능성이 높은 행동과 시점을 찾는 것이 목적이었습니다.</p>
-          </div>
-          <div>
-            <h4>수행</h4>
-            <ul>
-              <li>무료 상태에서 생성을 완료한 이용자를 대상으로 생성 1·3·5·10·25회 도달 후 7일 내 첫 구매율을 비교했습니다.</li>
-              <li>각 기준점 이전 구매자와 내부 계정은 제외했습니다.</li>
-              <li>근사 크레딧 사용량과 첫 사용 기능에 따른 구매율도 함께 비교했습니다.</li>
-              <li>반복 사용과 크레딧 사용이 확인된 이용자에게 작업을 방해하지 않는 결제 안내를 띄우는 실험을 제안했습니다.</li>
-            </ul>
-          </div>
-          <div>
-            <h4>분석 결과 · 2026.08.19 — 09.13 행동 기준, 7일 내 첫 구매율</h4>
-            <div class="bars" role="img" aria-label="7일 내 첫 구매율: 생성 1회 0.51%, 10회 1.22%, 25회 1.64%">
-              <div class="bar"><span class="k">생성 1회 도달</span><span class="track"><span class="fill ghost" style="width:31.1%"></span></span><span class="v">0.51%</span></div>
-              <div class="bar"><span class="k">생성 10회 도달</span><span class="track"><span class="fill" style="width:74.4%"></span></span><span class="v">1.22%</span></div>
-              <div class="bar"><span class="k">생성 25회 도달</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="v">1.64%</span></div>
-            </div>
-          </div>
-          <ul>
-            <li>10회·25회 도달 집단의 구매율은 1회 기준보다 각각 약 2.4배·3.2배 높았습니다.</li>
-          </ul>
-          <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">구매 신호는 반복 사용에서 나온다.</p><p>생성을 거듭한 이용자일수록 첫 구매율이 높았습니다. 결제 안내는 모두에게 같은 시점이 아니라 몰입이 쌓인 순간에 보여줘야 합니다.</p></aside>
-        </div>
-      </article>
-    <nav class="pager" aria-label="다른 프로젝트">
-      <a href="#g-signup"><span class="label">← 이전 프로젝트</span><b>가입 데이터 수집 오류 진단과 모니터링</b></a>
+      <a href="#g-events"><span class="label">← 이전 프로젝트</span><b>제품 분석 이벤트와 결제 데이터 개선 설계</b></a>
       <a href="#g-country"><span class="label">다음 프로젝트 →</span><b>해외 광고: 시장 선정부터 집행·예산 재편까지</b></a>
     </nav>
   </div>
@@ -283,8 +197,8 @@
         </div>
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
-      <a href="#g-intent"><span class="label">← 이전 프로젝트</span><b>행동 기반 유료 전환 분석과 실험 기획</b></a>
-      <a href="#g-events"><span class="label">다음 프로젝트 →</span><b>제품 분석 이벤트와 결제 데이터 개선 설계</b></a>
+      <a href="#g-seo"><span class="label">← 이전 프로젝트</span><b>검색 색인 구조 개선과 검색 유입 진단</b></a>
+      <a href="#g-ccp"><span class="label">다음 프로젝트 →</span><b>크리에이터 프로그램(CCP) 기획·운영과 추천 성과 추적</b></a>
     </nav>
   </div>
 </section>
@@ -321,8 +235,8 @@
         </div>
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
-      <a href="#g-country"><span class="label">← 이전 프로젝트</span><b>해외 광고: 시장 선정부터 집행·예산 재편까지</b></a>
-      <a href="#g-ccp"><span class="label">다음 프로젝트 →</span><b>크리에이터 프로그램(CCP) 기획·운영과 추천 성과 추적</b></a>
+      <a href="career.html#gaon-nordy"><span class="label">← 목록</span><b>가온프라임 / Nordy 프로젝트</b></a>
+      <a href="#g-seo"><span class="label">다음 프로젝트 →</span><b>검색 색인 구조 개선과 검색 유입 진단</b></a>
     </nav>
   </div>
 </section>
@@ -383,43 +297,7 @@
         </div>
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
-      <a href="#g-events"><span class="label">← 이전 프로젝트</span><b>제품 분석 이벤트와 결제 데이터 개선 설계</b></a>
-      <a href="#g-crm"><span class="label">다음 프로젝트 →</span><b>CRM 이메일 자동화와 개인화 타깃팅 기획</b></a>
-    </nav>
-  </div>
-</section>
-<section class="proj-page" id="g-crm" data-title="CRM 이메일 자동화와 개인화 타깃팅 기획" hidden>
-  <div class="wrap">
-    <p class="label crumb proj-crumb"><a href="career.html#gaon-nordy">← 가온프라임 / Nordy</a></p>
-      <article class="project">
-        <div class="project-head">
-          <p class="label">Nordy · CRM · 2026.08</p>
-          <h1 class="ptitle">CRM 이메일 자동화와 개인화 타깃팅 기획</h1>
-        </div>
-        <div class="pbody">
-          <div>
-            <h4>배경</h4>
-            <p>신규 모델과 공식 워크플로 출시 이메일을 반복 제작하면서, 누구에게 어떤 콘텐츠를 보내고 발송 후 무엇을 성과로 볼지 정리해야 했습니다. 단순 뉴스레터를 제품 사용으로 연결하는 CRM 구조가 목적이었습니다.</p>
-          </div>
-          <div>
-            <h4>수행</h4>
-            <ul>
-              <li>마케팅 동의, 이메일 유효성, 탈퇴 진행 상태를 적용해 1차 발송 후보를 산정했습니다 (2026.08.24 기준).</li>
-              <li>온보딩 응답 완성도와 중복을 점검했습니다. 후보 중 전체 응답은 약 40%, 일부 응답은 약 60%였고, 일부 응답자는 기본 세그먼트 값보다 실제 사용 행동을 우선하도록 기준을 세웠습니다.</li>
-              <li>운영자 릴리스 선택 → 이미지·카피 초안 생성 → 대상 확인 → 테스트 메일 → 승인 → 예약 발송 흐름을 설계했습니다.</li>
-              <li>출시 공지, 첫 생성 유도, 실패 복구, 두 번째 사용, 7일·21일 휴면 복귀 시나리오를 우선순위별로 정리했습니다.</li>
-              <li>오픈·클릭을 넘어 워크플로 실행과 생성 성공을 캠페인 성과로 측정하도록 지표를 정의했습니다.</li>
-            </ul>
-          </div>
-          <div>
-            <h4>온보딩 응답 품질</h4>
-            <div class="stack-wrap"><p class="stack-k">발송 후보의 온보딩 응답</p><div class="stack" role="img" aria-label="발송 후보 중 전체 응답 약 40%, 일부 응답 약 60%"><span class="s1" style="width:40%"></span><span class="s2" style="width:60%"></span></div><div class="legend"><span><i class="s1"></i>전체 응답 40%</span><span><i class="s2"></i>일부 응답 60%</span></div></div>
-          </div>
-          <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">CRM의 성과는 오픈율이 아니라 다음 행동이다.</p><p>메일을 열었는지보다 제품으로 돌아와 생성에 성공했는지를 봐야 캠페인이 실제 사용으로 이어지는지 알 수 있습니다. 개인화는 믿을 수 있는 데이터에서만 시작됩니다.</p></aside>
-        </div>
-      </article>
-    <nav class="pager" aria-label="다른 프로젝트">
-      <a href="#g-ccp"><span class="label">← 이전 프로젝트</span><b>크리에이터 프로그램(CCP) 기획·운영과 추천 성과 추적</b></a>
+      <a href="#g-country"><span class="label">← 이전 프로젝트</span><b>해외 광고: 시장 선정부터 집행·예산 재편까지</b></a>
       <a href="#g-abuse"><span class="label">다음 프로젝트 →</span><b>무료 크레딧 정책: 사용 행동 분석부터 어뷰징 탐지·정지까지</b></a>
     </nav>
   </div>
@@ -547,7 +425,7 @@
         </div>
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
-      <a href="#g-crm"><span class="label">← 이전 프로젝트</span><b>CRM 이메일 자동화와 개인화 타깃팅 기획</b></a>
+      <a href="#g-ccp"><span class="label">← 이전 프로젝트</span><b>크리에이터 프로그램(CCP) 기획·운영과 추천 성과 추적</b></a>
       <a href="career.html#gaon-nordy"><span class="label">목록 →</span><b>가온프라임 / Nordy 프로젝트</b></a>
     </nav>
   </div>
