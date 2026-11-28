@@ -884,3 +884,20 @@ body, .pbody p, .pbody li, .takeaway p { letter-spacing: 0; }
 
 /* Home project cards: one outcome line under the meta */
 .pcard .body .pc-out { display:block; font-style:normal; font-size: var(--t-sm); font-weight:700; color: var(--fg); margin-top:0.35rem; letter-spacing:-0.01em; }
+
+/* ===== Refine (2026-11-28): cards on the line system, rectangular portrait, readable secondary text ===== */
+/* 1. Project cards: no floating shadow tile, thin line + near-square corners like the rest of the site */
+.pcard { border: 1px solid var(--line); border-radius: 4px; box-shadow: none; transition: border-color .2s ease; }
+.pcard:hover { transform: none; box-shadow: none; border-color: var(--fg); }
+/* 2. Hero portrait: tall rectangle filling the right column */
+.hero-grid { grid-template-columns: minmax(0, 1fr) clamp(15rem, 24vw, 20rem); gap: clamp(2rem, 5vw, 4.5rem); align-items: end; }
+.portrait { width: 100%; aspect-ratio: 3 / 4; border-radius: 4px; box-shadow: none; }
+@media (max-width: 760px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .portrait { width: 8.5rem; }
+}
+/* 3. Secondary text one step larger and darker */
+.pcard .body span, .facts-row div span, .career .meta-n { font-size: var(--t-sm) !important; color: var(--muted); }
+.career .meta-n { color: var(--fg); }
+/* 4. Hero buttons: same near-square corners as cards and portrait */
+.btn { border-radius: 4px; }
