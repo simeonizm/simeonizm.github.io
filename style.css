@@ -907,3 +907,9 @@ body, .pbody p, .pbody li, .takeaway p { letter-spacing: 0; }
 .pcard:hover .thumb.cover { background: var(--cover); }
 .pcard:hover { transform: translateY(-3px); box-shadow: 0 10px 28px -12px rgba(0,0,0,.18); border-color: var(--line); }
 @media (prefers-reduced-motion: reduce) { .pcard, .pcard:hover { transition: none; transform: none; } }
+
+/* service header inside project tabs (merged 담당 서비스) */
+.subpanel-desc { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 0.9rem; }
+.subpanel-desc b { color: var(--fg); font-weight: 700; }
+.subpanel-desc a { color: var(--faint); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+.subpanel-desc a:hover, .subpanel-desc a:focus-visible { color: var(--fg); text-decoration-color: var(--fg); }
