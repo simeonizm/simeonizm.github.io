@@ -854,7 +854,7 @@ section.block + section.block { padding-top: clamp(1rem, 3vw, 2rem); }
 .subtab:hover { color: var(--fg); }
 .subtab[aria-selected="true"] { background: none; color: var(--fg); box-shadow: inset 0 -2px 0 var(--fg); }
 /* Premium header is 3.25rem tall: keep sticky career tabs flush under it */
-.tabs-bar { top: calc(env(safe-area-inset-top, 0px) + 3.25rem); }
+@media (min-width: 761px) { .tabs-bar { top: calc(env(safe-area-inset-top, 0px) + 3.25rem); } }
 .panel, .project, .panel section[id], .subpanel, .subtabs { scroll-margin-top: 8.5rem; }
 .subtab, .subtab + .subtab { font-size: var(--t-md) !important; font-weight: 700; letter-spacing: -0.02em; padding-bottom: 0.4rem; }
 .subtabs { gap: 1.75rem; margin-bottom: 0.6rem; }
@@ -881,3 +881,6 @@ body, .pbody p, .pbody li, .takeaway p { letter-spacing: 0; }
 .persona, .pipe-box, .cb, .code-one, .proj-page .case { border-top-color: var(--line); }
 .pager { border-top-color: var(--line); }
 .takeaway, .proj-page .takeaway { border-top-width: 2px; }
+
+/* Home project cards: one outcome line under the meta */
+.pcard .body .pc-out { display:block; font-style:normal; font-size: var(--t-sm); font-weight:700; color: var(--fg); margin-top:0.35rem; letter-spacing:-0.01em; }
