@@ -178,51 +178,108 @@
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
       <a href="#g-signup"><span class="label">← 이전 프로젝트</span><b>가입 데이터 수집 오류 진단과 모니터링</b></a>
-      <a href="#g-country"><span class="label">다음 프로젝트 →</span><b>국가별 퍼널 분석과 해외 광고 운영안</b></a>
+      <a href="#g-country"><span class="label">다음 프로젝트 →</span><b>해외 광고: 시장 선정부터 집행·예산 재편까지</b></a>
     </nav>
   </div>
 </section>
-<section class="proj-page" id="g-country" data-title="국가별 퍼널 분석과 해외 광고 운영안" hidden>
+<section class="proj-page" id="g-country" data-title="해외 광고: 시장 선정부터 집행·예산 재편까지" hidden>
   <div class="wrap">
     <p class="label crumb proj-crumb"><a href="career.html#gaon-nordy">← 가온프라임 / Nordy</a></p>
       <article class="project">
         <div class="project-head">
-          <p class="label">Nordy · 해외 광고</p>
-          <h1 class="ptitle">국가별 퍼널 분석과 해외 광고 운영안</h1>
+          <p class="label">Nordy · 퍼포먼스 마케팅 · 2026.03 — 11</p>
+          <h1 class="ptitle">해외 광고: 시장 선정부터 집행·예산 재편까지</h1>
+          <span class="kpi">3개국 · Google·Meta 동시 개시, 구매가 모인 곳으로 예산 재편</span>
+        </div>
+        <div class="highlights">
+          <p class="label hl-title">핵심 변화</p>
+          <div class="hl"><span class="hl-k">집행 중인 광고</span><div class="hl-v" aria-label="0개에서 3개국 2개 매체로"><s>0</s><i aria-hidden="true">→</i><b>3개국 × 2매체</b></div><span class="hl-n">브라질·미국·베트남, 2026.11.16 개시</span></div>
+          <div class="hl"><span class="hl-k">구매 집계와 주문 DB 일치</span><div class="hl-v" aria-label="거래 단위 100% 일치"><b>100%</b></div><span class="hl-n">‘출처 없음’으로 읽힌 구매를 거래 단위로 바로잡음</span></div>
+          <div class="hl"><span class="hl-k">구매가 모인 세트 예산</span><div class="hl-v" aria-label="미국 30% 증액, 브라질 17.5% 증액"><b>+30% · +17.5%</b></div><span class="hl-n">미국 · 브라질 ‘브랜드·가격’ 세트, 베트남 Meta는 중지</span></div>
         </div>
         <div class="pbody">
           <div>
-            <h4>배경</h4>
-            <p>제한된 예산과 1인 운영 여건에서 해외 광고 우선 국가와 채널을 정해야 했습니다. 방문자 규모뿐 아니라 실제 구매 수요와 결제 성공 가능성을 함께 봐야 했습니다.</p>
-          </div>
-          <div class="kpis">
-            <div><b>약 9만 명</b><span>분석 방문자</span></div>
-            <div><b>약 3만 건</b><span>DB 가입</span></div>
-            <div><b>약 1,200건</b><span>구매 이벤트</span></div>
-            <div><b>83.4%</b><span>구매 중 구독 비중</span></div>
+            <h4>배경: 가입이 아니라 첫 결제로 광고비를 회수할 수 있는가</h4>
+            <p>Nordy 광고의 질문은 하나였습니다. 유료 광고로 <b>처음 결제하는 고객</b>을 데려오고, 그 첫 결제 매출로 광고비를 회수할 수 있는가. 그래서 성공 기준을 가입 수가 아니라 <b>광고로 들어온 신규 고객의 첫 결제 매출 ÷ 광고비</b>로 정했습니다.</p>
           </div>
           <div>
-            <h4>수행</h4>
+            <h4>1. 초기 테스트: 가입이 싼 시장이 돈을 내는 시장은 아니었다</h4>
             <ul>
-              <li>2026년 6~8월 GA 방문과 DB 가입·구매 데이터를 국가별로 비교했습니다.</li>
-              <li>방문 대비 구매, 순구매자, 구독·크레딧 구매 구성, 최종 결제 성공률을 함께 평가했습니다.</li>
-              <li>브라질·베트남·사우디아라비아·멕시코·미국을 우선 검증 대상으로 골랐습니다.</li>
-              <li>정해진 월 예산을 전제로 Meta와 Google 검색광고 중심의 국가·채널·전환 목표별 운영안을 세웠습니다.</li>
+              <li>3월 Google 검색광고로 한국, 브라질·미국·베트남, 유럽 묶음을 나눠 국가와 기기별 효율을 비교했습니다.</li>
+              <li>4월 Meta에서 한국과 해외 6개국 세트를 비교하니 가입 1건 비용이 해외 약 ₩1,015, 한국 약 ₩5,300으로 <b>약 5배</b> 차이 났습니다.</li>
+              <li>가입이 싸도 결제로 이어지는지는 별개라고 보고, 5월에는 가입 데이터를 유사 타깃의 씨앗으로 쓰고 구매를 최적화 목표로 삼는 구매 캠페인으로 다시 설계했습니다.</li>
+              <li>브라우저 Pixel과 서버 전환 API를 함께 쓰고 같은 이벤트 ID로 중복을 막는 측정 구조를 개발에 요청했습니다.</li>
             </ul>
           </div>
           <div>
-            <h4>판단</h4>
-            <ul>
-              <li><b>브라질</b>은 구독과 크레딧의 결제 성공률 차이가 커 구독 첫 결제를 우선 목표로 제안했습니다.</li>
-              <li><b>미국</b>은 결제 성공률이 44.12%로 낮아 고의도 검색광고 중심의 제한적 검증을 제안했습니다.</li>
-              <li><b>멕시코</b>처럼 전환 지표가 좋아도 구매자 표본이 작은 국가는 확정 시장이 아닌 테스트 후보로 분류했습니다.</li>
+            <h4>2. 시장 선정: 실제 첫 구매가 있는 나라부터</h4>
+            <p>9월에는 브라질·베트남·사우디아라비아·멕시코·미국을 후보로 두고 국가별 방문, 가입, 구매 구성, 결제 성공률을 비교했습니다. 10월에는 GA4 방문과 주문 DB의 첫 구매자를 대조해 <b>실제 첫 구매가 확인된 세 나라</b>로 좁혔습니다.</p>
+            <p class="stack-k" style="margin:1.2rem 0 .5rem">세 나라 첫 구매자 비중 (2026.07.16 — 10.15)</p>
+            <div class="stack-wrap"><div class="stack" role="img" aria-label="첫 구매자 비중 브라질 91.4%, 미국 5.0%, 베트남 3.6%"><span class="s1" style="width:91.4%"></span><span class="s2" style="width:5.0%"></span><span class="s2" style="width:3.6%;opacity:.55"></span></div><div class="legend"><span><i class="s1"></i>브라질 91.4%</span><span><i class="s2"></i>미국 5.0%</span><span><i class="s2" style="opacity:.55"></i>베트남 3.6%</span></div></div>
+            <div class="tbl-wrap" style="margin-top:1.4rem">
+              <table class="pk">
+                <thead><tr><th>국가</th><th class="n">예산 비중</th><th class="n">Meta : Google</th><th>근거</th></tr></thead>
+                <tbody>
+                  <tr><td>브라질</td><td class="n">50%</td><td class="n">60 : 40</td><td>첫 구매 기반이 가장 크고 Instagram 도달 근거가 있어 Meta 중심</td></tr>
+                  <tr><td>미국</td><td class="n">30%</td><td class="n">50 : 50</td><td>구매 이력은 있지만 표본이 작아 두 매체를 같은 금액으로 비교</td></tr>
+                  <tr><td>베트남</td><td class="n">20%</td><td class="n">60 : 40</td><td>Facebook·YouTube 도달은 크지만 구매가 적어 작게 시작</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top:1rem">초반에 예산을 몰면 후반이 비는 시나리오를 검토해 45일 균등 집행으로 정했고, 구매가 드문 시장은 예산을 쪼갤수록 학습 신호가 줄어든다는 점을 반영했습니다.</p>
+          </div>
+          <div>
+            <h4>3. 캠페인 구조: ‘브랜드·가격’과 ‘기능’으로 나눴다</h4>
+            <div class="personas">
+              <div class="persona">
+                <p class="label">01 브랜드 · 가격</p>
+                <b>한곳에서 다 되는 AI 스튜디오, 그리고 가격</b>
+                <span>패션 화보, 뷰티 제품, 시네마틱, 브랜드 그래픽처럼 여러 모델과 도구를 한곳에서 쓰는 가치와 가격을 앞세웠습니다.</span>
+              </div>
+              <div class="persona">
+                <p class="label">02 기능 · 변화 체감</p>
+                <b>같은 입력이 이렇게 달라진다</b>
+                <span>한 장의 사진에서 여러 방향, 같은 장면의 낮과 밤, 스케치에서 시네마틱처럼 기능의 전후를 보여줬습니다.</span>
+              </div>
+            </div>
+            <ul style="margin-top:1.2rem">
+              <li>Google은 국가별 PMax에 두 애셋 그룹을, Meta는 국가마다 두 광고 세트를 만들어 같은 기준으로 비교했습니다.</li>
+              <li><b>GA4에 미리 쌓아 둔 잠재고객</b>을 활용했습니다. 사이트 방문자·미구매자 잠재고객을 타깃 신호로 넣어 관심이 확인된 사람부터 찾게 하고, 기존 구매자는 제외해 신규 고객에게만 예산이 가게 했습니다.</li>
+              <li>Codex 등 AI 에이전트와 함께 소재 등록과 링크 설정을 진행하고, 매 작업 뒤 계정을 다시 조회해 광고별 UTM과 도착 주소를 전수 대조했습니다.</li>
             </ul>
           </div>
           <div>
-            <h4>구매 구성</h4>
-            <div class="stack-wrap"><p class="stack-k">구매 이벤트 중 상품 비중</p><div class="stack" role="img" aria-label="구매 이벤트 중 구독 83.4%, 크레딧 16.6%"><span class="s1" style="width:83.4%"></span><span class="s2" style="width:16.6%"></span></div><div class="legend"><span><i class="s1"></i>구독 83.4%</span><span><i class="s2"></i>크레딧 16.6%</span></div></div>
+            <h4>4. 소재: 한 콘셉트를 3개 언어 · 모든 비율로</h4>
+            <ul>
+              <li>경쟁사 광고를 참고해 ‘어떤 결과를 얻는지 먼저 보여주는’ 구조로 이미지와 20초 영상을 기획했습니다. 영상은 브랜드형·기능형·서비스 화면형·타이포형 4계열로 만들었습니다.</li>
+              <li>원본 생성 → 비교 시안 → 문구·로고 합성 → 채널별 크롭 → 국가별 번역 → 미리보기 순으로 제작하고, 포르투갈어·베트남어의 긴 단어와 글자 잘림, 세로 화면의 버튼 가림까지 실제 프레임으로 검수했습니다.</li>
+              <li>연말 할인용으로 4계열 × 3개 언어 × 3개 비율, <b>영상 36편</b>을 확보했습니다.</li>
+            </ul>
           </div>
-          <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">가입이 많은 시장과 돈을 내는 시장은 다르다.</p><p>트래픽 규모만 보고 국가를 고르면 예산이 결제로 이어지지 않습니다. 결제 성공률과 상품 구성까지 함께 봐야 국가별 광고 목표를 정할 수 있습니다.</p></aside>
+          <div>
+            <h4>5. 집행 후: 측정을 바로잡고 랜딩을 맞췄다</h4>
+            <ul>
+              <li><b>구매 집계 정정.</b> 개시 다음 날 GA4에서 구매 대부분이 ‘출처 없음’으로 보였지만, 거래 단위로 다시 조회해 실제 유입 경로로 바로잡았습니다. 주문 DB의 결제 완료와 GA4 구매가 거래 키로 모두 일치하는 것도 확인했습니다.</li>
+              <li><b>한 보드에서 같은 기준으로.</b> 광고 플랫폼 숫자, GA4, 주문 DB, Mixpanel 흐름을 나란히 놓고 ‘첫 유료 유입 → 가격 → 결제 시작 → 7일 안 구매’ 퍼널로 기준을 맞췄습니다.</li>
+              <li><b>광고의 약속 = 도착 페이지.</b> 모든 광고가 홈으로 가던 것을, 광고에서 보여준 결과에 맞춰 조명 변경·이미지 편집·이미지 생성·영상 도구로 바로 열리게 바꾸고 국가별 언어 페이지를 확인했습니다.</li>
+              <li><b>할인 설계.</b> 같은 매출을 지키려면 10% 할인은 구매 약 11.1%, 15%는 약 17.6%, 20%는 약 25.0% 증가가 필요하다는 계산으로 10% 테스트를 먼저 정하고, 결제 흐름을 개발 문서로 전달했습니다.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>6. 예산 재편: 구매가 모이는 곳으로</h4>
+            <div class="tbl-wrap">
+              <table class="pk">
+                <thead><tr><th>발견</th><th>결정</th></tr></thead>
+                <tbody>
+                  <tr><td>미국·브라질 모두 구매 대부분이 <b>‘브랜드·가격’ 세트</b>에서 나왔다</td><td>해당 세트 예산 미국 <b>+30%</b>, 브라질 <b>+17.5%</b></td></tr>
+                  <tr><td>베트남은 구매 1건당 비용이 높고 구매 수가 적었다</td><td>베트남 Meta 광고 세트 중지</td></tr>
+                  <tr><td>PMax 비용의 <b>약 97%</b>와 보고된 전환이 모두 검색에 몰려, 이미지·영상은 판단할 기회조차 없었다</td><td>국가마다 <b>검색 1개 + 디멘드젠 1개</b>로 나눠 검색과 이미지·영상 예산을 따로 쓰는 구조를 설계·등록</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top:1rem">새 검색 캠페인은 브랜드·일반 영상·일반 이미지·경쟁사 4개 그룹으로, 기존 PMax의 실제 검색어로 키워드와 제외어를 보강했습니다. 디멘드젠은 GA4 방문자·미구매자 신호와 구매자 제외를 그대로 이어 받았고, 등록한 광고 14개 모두 승인과 ‘매우 좋음’ 광고 효력을 확인했습니다.</p>
+          </div>
+          <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">광고비는 계획이 아니라 구매를 따라간다.</p><p>가입이 싼 시장보다 첫 구매가 있는 시장을, 매체가 보여주는 숫자보다 주문과 맞는 숫자를 기준으로 삼았습니다. 그 기준으로 보니 구매는 ‘브랜드·가격’ 메시지와 검색에 모였고, 예산과 캠페인 구조를 그쪽으로 다시 짰습니다.</p></aside>
         </div>
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
@@ -264,7 +321,7 @@
         </div>
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
-      <a href="#g-country"><span class="label">← 이전 프로젝트</span><b>국가별 퍼널 분석과 해외 광고 운영안</b></a>
+      <a href="#g-country"><span class="label">← 이전 프로젝트</span><b>해외 광고: 시장 선정부터 집행·예산 재편까지</b></a>
       <a href="#g-ccp"><span class="label">다음 프로젝트 →</span><b>크리에이터 프로그램(CCP) 기획·운영과 추천 성과 추적</b></a>
     </nav>
   </div>
@@ -496,42 +553,6 @@
       </article>
     <nav class="pager" aria-label="다른 프로젝트">
       <a href="#g-credit"><span class="label">← 이전 프로젝트</span><b>무료 크레딧 소진과 재이용 행동 분석</b></a>
-      <a href="#g-creative"><span class="label">다음 프로젝트 →</span><b>생성형 AI 광고 크리에이티브 기획</b></a>
-    </nav>
-  </div>
-</section>
-<section class="proj-page" id="g-creative" data-title="생성형 AI 광고 크리에이티브 기획" hidden>
-  <div class="wrap">
-    <p class="label crumb proj-crumb"><a href="career.html#gaon-nordy">← 가온프라임 / Nordy</a></p>
-      <article class="project">
-        <div class="project-head">
-          <p class="label">Nordy · 크리에이티브</p>
-          <h1 class="ptitle">생성형 AI 광고 크리에이티브 기획</h1>
-        </div>
-        <div class="pbody">
-          <div>
-            <h4>배경</h4>
-            <p>Nordy의 이미지·영상 생성 가치를 짧은 시간에 전달할 광고 콘셉트가 필요했습니다. 기능 설명이 길어지는 문제를 줄이고, 이용자가 만들고 싶은 결과를 직관적으로 보여주는 방향을 찾았습니다.</p>
-          </div>
-          <div class="kpis">
-            <div><b>BIGGER</b><span>크기 변화</span></div>
-            <div><b>WILDER</b><span>장면 확장</span></div>
-            <div><b>YOURS</b><span>사용자 소유감</span></div>
-          </div>
-          <div>
-            <h4>수행</h4>
-            <ul>
-              <li>작은 아이디어가 큰 세계로 확장되는 이야기를 15초 광고 구조로 기획했습니다.</li>
-              <li>세 단어에 맞춰 장면 변화와 제품 메시지를 연결했습니다.</li>
-              <li>은색·민트 색감과 꽃·초현실 도시를 연결한 4컷 콘셉트 보드를 이미지 생성 도구로 만들었습니다.</li>
-              <li>작은 꽃에서 시작하던 구성을 씨앗 낙하 → 발아 → 거대한 꽃으로 바꿔 성장의 흐름을 보완했습니다.</li>
-            </ul>
-          </div>
-          <aside class="takeaway"><p class="label">인사이트</p><p class="tk-head">AI는 도구일 뿐, 이야기는 기획이 만든다.</p><p>생성 이미지를 고르기 전에 메시지와 장면 순서를 먼저 정해야 15초 안에 제품 가치가 전달됩니다.</p></aside>
-        </div>
-      </article>
-    <nav class="pager" aria-label="다른 프로젝트">
-      <a href="#g-abuse"><span class="label">← 이전 프로젝트</span><b>무료 크레딧 어뷰징 탐지와 정지·이의제기 운영</b></a>
       <a href="career.html#gaon-nordy"><span class="label">목록 →</span><b>가온프라임 / Nordy 프로젝트</b></a>
     </nav>
   </div>
